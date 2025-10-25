@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Borbála Nagy - Filmmaker Portfolio
 
-## Getting Started
+A modern, professional portfolio website for filmmaker Borbála Nagy, showcasing her works and directing vision.
 
-First, run the development server:
+## 🎬 About
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This is a Next.js-based portfolio website featuring:
+
+- **Landing Page**: Hero section with director introduction (fits in one screen, no scroll)
+- **About Page**: Director biography and professional background
+- **Vision Page**: Directorial vision and approach to filmmaking
+- **Works Page**: Complete filmography with film details
+- **Individual Film Pages**: Detailed pages for each film with stills and credits
+- **Contact Page**: Professional contact information and inquiry form
+
+## 🎨 Brand & Design
+
+**Brand Values**: Trustworthy, Courageous, Sincere, Mature
+
+**Brand Colors**:
+- Primary: `#F1574D` (coral/red)
+- Secondary: `#7DB4EC` (light blue)
+
+The design maintains a professional, mature aesthetic with clean typography and visual hierarchy that reflects the director's brand values.
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 14+ with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Fonts**: Outfit (Google Fonts)
+- **Development**: Turbopack for fast development
+
+## 📁 Project Structure
+
+```
+src/app/
+├── components/
+│   └── Navigation.tsx      # Main navigation component
+├── about/
+│   └── page.tsx           # Director biography
+├── vision/
+│   └── page.tsx           # Directorial vision
+├── works/
+│   ├── page.tsx           # Film portfolio grid
+│   └── [slug]/
+│       └── page.tsx       # Individual film pages
+├── contact/
+│   └── page.tsx           # Contact information
+├── globals.css            # Global styles with brand colors
+├── layout.tsx             # Root layout with navigation
+└── page.tsx               # Landing page with hero section
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+ 
+- npm or yarn
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Deploy on Vercel
+### Build for Production
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+npm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Development Notes
+
+- Landing page designed to fit in viewport without scrolling
+- Uses brand colors consistently throughout
+- Responsive design for all screen sizes
+- Focus on accessibility and professional presentation
+- Image placeholders ready for actual film stills and photos
+
+## 🎯 Features Implemented
+
+- ✅ Responsive navigation bar
+- ✅ Hero landing page that fits in one screen
+- ✅ About page with director biography
+- ✅ Works page showcasing all films
+- ✅ Dynamic routing for individual film pages
+- ✅ Contact page with form
+- ✅ Brand color integration
+- ✅ Professional typography and spacing
+- ✅ Mobile-responsive design
+
+## 📋 Content To Add
+
+- Replace image placeholders with actual film stills
+- Add director photography
+- Complete film data for all works
+- Add vision page content
+- Configure contact form functionality
+- Add film festival information and awards
+
+## 🎨 Customization
+
+Brand colors are defined in:
+- `tailwind.config.ts` - Tailwind configuration
+- `src/app/globals.css` - CSS custom properties
+
+To update colors, modify the values in both files.
+
+---
+
+**Created for**: Borbála Nagy, Filmmaker  
+**Technology**: Next.js 14, TypeScript, Tailwind CSS  
+**Status**: Development Ready
