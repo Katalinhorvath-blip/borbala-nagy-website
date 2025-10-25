@@ -15,9 +15,9 @@ interface FilmData {
   title: string
   subtitle?: string
   type: string
-  duration: string
-  year: string
-  language: string
+  duration?: string
+  year?: string
+  language?: string
   originalTitle?: string
   synopsis: string
   images: string[]
@@ -76,6 +76,14 @@ const FilmModal = ({
     setCurrentImageIndex(0)
   }, [film])
 
+  // Add body class when modal is open to hide header
+  useEffect(() => {
+    document.body.classList.add('modal-open')
+    return () => {
+      document.body.classList.remove('modal-open')
+    }
+  }, [])
+
   if (!film) return null
 
   return (
@@ -110,11 +118,6 @@ const FilmModal = ({
 
         {/* Modal Content */}
         <div className="film-modal-content">
-          {/* Back Button */}
-          <button onClick={onClose} className="film-modal-back">
-            ← Back
-          </button>
-
           {/* Film Header */}
           <div className="film-modal-header">
             <h1 className="film-modal-title">{film.title}</h1>
@@ -122,9 +125,11 @@ const FilmModal = ({
               <p className="film-modal-subtitle">{film.subtitle}</p>
             )}
             <div className="film-modal-meta">
-              <span>{film.type}</span> | <span>{film.duration}</span> | <span>{film.year}</span>
+              <span>{film.type}</span>
+              {film.duration && <><span> | </span><span>{film.duration}</span></>}
+              {film.year && <><span> | </span><span>{film.year}</span></>}
               <br />
-              <span>{film.language}</span>
+              {film.language && <span>{film.language}</span>}
               {film.originalTitle && (
                 <>
                   <br />

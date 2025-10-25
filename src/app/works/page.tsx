@@ -48,16 +48,20 @@ export default function Works() {
                   <div>
                     <h3 className="film-title">{film.title}</h3>
                     {film.subtitle && <p className="film-subtitle">{film.subtitle}</p>}
-                    <p className="film-details">{film.duration}, {film.year}</p>
+                    <p className="film-details">
+                      {film.duration && film.year ? `${film.duration}, ${film.year}` : 
+                       film.duration ? film.duration :
+                       film.year ? film.year : ''}
+                    </p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Bottom row: 2 films centered */}
+          {/* Bottom row: 3 films centered */}
           <div className="works-bottom-grid">
-            {content.films.slice(6, 8).map((film) => (
+            {content.films.slice(6, 9).map((film) => (
               <div 
                 key={film.id} 
                 className="film-card"
@@ -74,7 +78,11 @@ export default function Works() {
                   <div>
                     <h3 className={`film-title ${!film.subtitle ? 'compact' : ''}`}>{film.title}</h3>
                     {film.subtitle && <p className="film-subtitle">{film.subtitle}</p>}
-                    <p className="film-details">{film.duration}, {film.year}</p>
+                    <p className="film-details">
+                      {film.duration && film.year ? `${film.duration}, ${film.year}` : 
+                       film.duration ? film.duration :
+                       film.year ? film.year : ''}
+                    </p>
                   </div>
                 </div>
               </div>

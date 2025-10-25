@@ -11,7 +11,7 @@ export default function About() {
             {/* Director Photo */}
             <div className="image-container">
               <Image
-                src="/ABOUT IMAGE.jpg"
+                src="/images/about/ABOUT IMAGE.jpg"
                 alt="Borbála Nagy - Director"
                 width={450}
                 height={585.27}

@@ -32,7 +32,7 @@ export default function Vision() {
             {/* Director Photo */}
             <div className="image-container">
               <Image
-                src="/VISION IMAGE.jpg"
+                src="/images/vision/VISION IMAGE.jpg"
                 alt="Borbála Nagy"
                 width={500}
                 height={600}
