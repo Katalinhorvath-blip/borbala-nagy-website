@@ -2,7 +2,7 @@
 :root {
   --page-top-spacing: 40px;
   --page-side-spacing: 80px;
-  --page-bottom-spacing: 40px;
+  --page-bottom-spacing: 0px;
 }
 
 /* Responsive spacing tokens */
@@ -286,6 +286,8 @@ button:focus {
 .page-container-scroll {
   background: #FDF4EC;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-content {
@@ -295,6 +297,7 @@ button:focus {
   padding-bottom: var(--page-bottom-spacing);
   display: flex;
   justify-content: center;
+  flex: 1;
 }
 
 .content-wrapper {
@@ -329,7 +332,7 @@ button:focus {
 .home-main {
   width: 100%;
   max-width: 1440px;
-  height: calc(100vh - 120px); /* Adjusted for header + padding */
+  min-height: calc(100vh - 200px); /* Changed to min-height and reduced for footer space */
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -382,6 +385,7 @@ button:focus {
   align-items: center;
   gap: 5px;
   display: flex;
+  padding-bottom: 24px;
 }
 
 .cta-button {
@@ -435,15 +439,23 @@ button:focus {
 }
 
 .copyright-footer {
-  position: fixed;
-  bottom: 4px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: auto;
   text-align: center;
   color: #EF484E;
   font-size: 12px;
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
+  padding-bottom: 8px;
+}
+
+/* Home page specific footer positioning */
+.page-container .copyright-footer {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0;
+  padding-bottom: 0;
 }
 
 /* Image Slider Component Styles */
@@ -485,17 +497,41 @@ button:focus {
   display: flex;
   gap: 8px;
   z-index: 10;
+  align-items: center; /* Ensure dots are properly aligned */
+  height: auto; /* Prevent height constraints */
+  flex-wrap: nowrap; /* Prevent wrapping that could squash */
+  justify-content: center; /* Center the dots */
 }
 
 .image-slider-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: none;
+  /* Reset all button styles */
+  all: unset;
+  
+  /* Force perfect circle */
+  display: inline-block;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   transition: all 0.4s ease;
   transform: scale(1);
+  
+  /* Prevent any deformation */
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  min-width: 10px !important;
+  max-width: 10px !important;
+  min-height: 10px !important;
+  max-height: 10px !important;
+  box-sizing: border-box !important;
+  aspect-ratio: 1/1 !important;
+  
+  /* Remove any button-specific styling */
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .image-slider-dot.active {
@@ -998,15 +1034,13 @@ button:focus {
 
 /* Copyright Footer */
 .copyright-footer {
-  position: fixed;
-  bottom: 2px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 16px;
   text-align: center;
   color: #EF484E;
   font-size: 12px;
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
+  padding-bottom: 20px;
 }
 
 /* Film Detail Page Styles */
@@ -1232,18 +1266,6 @@ button:focus {
 
 .film-card:hover .film-details {
   transform: translateY(0);
-}
-
-.works-copyright-footer {
-  position: fixed;
-  bottom: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: #EF484E;
-  font-size: 12px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 400;
 }
 
 /* Film Modal Styles */
@@ -1669,6 +1691,31 @@ button:focus {
   
   .awards-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Contact Page Responsive Styles */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-grid {
+    padding: 0 16px;
+    gap: 20px;
   }
 }
 

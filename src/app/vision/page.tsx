@@ -12,19 +12,15 @@ export default function Vision() {
             <div className="text-container">
               <div className="bio-text">
                 <span className="vision-quote">
-                  &ldquo;The power of cinema is a catalyst for meaningful change. Narratives shaped by the female gaze create space for more complex, authentic, and diverse portrayals of human experience—fostering empathy and expanding our understanding of the world.&rdquo;
+                  &ldquo;Stories shaped by the female gaze create space for more complex, authentic, and diverse portrayals of human experience—fostering empathy and expanding our understanding of the world.&rdquo;
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
-                  In her work, Borbála Nagy challenges unjust social structures with the aim of provoking a dialogue, reshaping collective narratives and contributing to a more equitable world.
+                  In her work, Borbála Nagy challenges unjust social structures, aiming to provoke dialogue, reshape collective narratives, and contribute to a more equitable world. She believes in the power of cinema as a catalyst for meaningful change. Both in her films and on set, she advocates for an open, conscious, and inclusive society.
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
-                  Questions on loneliness, identity, and self-ownership keep emerging in her movies, while exploring gender, migration, the impact of oppression, and the possibilities of resistance.
-                </span>
-                <br/><br/>
-                <span className="bio-text-span">
-                  In her stories as well as on the film set, she advocates for an open, conscious and inclusive society.
+                  Questions of loneliness, identity, and self-ownership frequently emerge in her movies, while she also delves into themes of gender, migration, the impact of oppression, and the possibilities of resistance. Captivated by human nature, she examines how true character emerges when faced with a moral dilemma. These pivotal moments reveal self-confrontation through the societal mirror and the essence of the individual. Despite the weight of her subjects, she finds humor in everyday absurdities, looking at the world through a lens of irony.
                 </span>
               </div>
             </div>

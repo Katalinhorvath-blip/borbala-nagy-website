@@ -6,37 +6,7 @@ export default function Contact() {
       <Header />
       <div className="main-content">
         <div className="content-wrapper">
-          <div className="contact-content">
-            <h1 style={{
-              fontSize: '36px',
-              fontFamily: 'Outfit, sans-serif',
-              fontWeight: '700',
-              color: '#333333',
-              marginBottom: '16px',
-              textAlign: 'center'
-            }}>
-              Get in Touch
-            </h1>
-            <p style={{
-              fontSize: '16px',
-              fontFamily: 'Outfit, sans-serif',
-              fontWeight: '400',
-              color: '#666666',
-              marginBottom: '48px',
-              textAlign: 'center',
-              lineHeight: '24px'
-            }}>
-              Available for collaboration opportunities, screenings, and professional inquiries.
-            </p>
-          </div>          
-          
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '40px',
-            maxWidth: '1000px',
-            margin: '0 auto'
-          }}>
+          <div className="contact-grid">
             {/* Left Column - Contact Information */}
             <div>
               <h2 style={{
@@ -65,7 +35,7 @@ export default function Contact() {
                     fontWeight: '400',
                     color: '#666666'
                   }}>
-                    contact@borbalanagy.com
+                    mail@borbalanagy.com
                   </p>
                 </div>
                 
@@ -244,60 +214,6 @@ export default function Contact() {
             maxWidth: '1000px',
             margin: '60px auto 0 auto'
           }}>
-            <div>
-              <h2 style={{
-                fontSize: '24px',
-                fontFamily: 'Outfit, sans-serif',
-                fontWeight: '700',
-                color: '#333333',
-                marginBottom: '24px'
-              }}>
-                Professional Background
-              </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                <div>
-                  <h3 style={{
-                    fontSize: '16px',
-                    fontFamily: 'Outfit, sans-serif',
-                    fontWeight: '600',
-                    color: '#333333',
-                    marginBottom: '8px'
-                  }}>
-                    Industry Associations
-                  </h3>
-                  <p style={{
-                    fontSize: '14px',
-                    fontFamily: 'Outfit, sans-serif',
-                    fontWeight: '400',
-                    color: '#666666',
-                    lineHeight: '20px'
-                  }}>
-                    Alumni of Cannes Cinéfondation Residence, Berlinale Talents, and Talents Sarajevo
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 style={{
-                    fontSize: '16px',
-                    fontFamily: 'Outfit, sans-serif',
-                    fontWeight: '600',
-                    color: '#333333',
-                    marginBottom: '8px'
-                  }}>
-                    Film Festivals
-                  </h3>
-                  <p style={{
-                    fontSize: '14px',
-                    fontFamily: 'Outfit, sans-serif',
-                    fontWeight: '400',
-                    color: '#666666',
-                    lineHeight: '20px'
-                  }}>
-                    Available as curator and jury member for international film festivals
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

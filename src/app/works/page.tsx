@@ -62,7 +62,7 @@ export default function Works() {
       </div>
       
       {/* Copyright Footer */}
-      <div className="works-copyright-footer">
+      <div className="copyright-footer">
         © 2025 Borbála Nagy. All rights reserved.
       </div>
 
