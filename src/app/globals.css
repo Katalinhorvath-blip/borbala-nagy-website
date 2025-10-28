@@ -644,8 +644,12 @@ button:focus {
   padding: 16px;
   color: #333333;
   opacity: 0;
-  transition: opacity 0.3s ease;
   gap: 8px;
+}
+
+.film-info-overlay * {
+  transition: none !important;
+  animation: none !important;
 }
 
 .film-card:hover .film-info-overlay {
