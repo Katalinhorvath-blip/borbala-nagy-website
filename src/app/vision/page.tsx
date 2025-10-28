@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Vision() {
   return (
-    <div className="page-container">
+    <div className="page-container-scroll">
       <Header />
       <div className="main-content">
         <div className="content-wrapper-about">

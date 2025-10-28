@@ -29,9 +29,9 @@ export default function Works() {
       <div className="works-main-content">
         {/* Works Grid Container */}
         <div className="works-grid-container">
-          {/* Grid Layout: 3 films per row for first 6, then 2 centered */}
-          <div className="works-top-grid">
-            {content.films.slice(0, 6).map((film) => (
+          {/* Single responsive grid for all films */}
+          <div className="works-grid">
+            {content.films.map((film) => (
               <div 
                 key={film.id} 
                 className="film-card"
@@ -47,36 +47,6 @@ export default function Works() {
                   <div className="film-category">{film.type.toUpperCase()}</div>
                   <div>
                     <h3 className="film-title">{film.title}</h3>
-                    {film.subtitle && <p className="film-subtitle">{film.subtitle}</p>}
-                    <p className="film-details">
-                      {film.duration && film.year ? `${film.duration}, ${film.year}` : 
-                       film.duration ? film.duration :
-                       film.year ? film.year : ''}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom row: 3 films centered */}
-          <div className="works-bottom-grid">
-            {content.films.slice(6, 9).map((film) => (
-              <div 
-                key={film.id} 
-                className="film-card"
-                onClick={() => openModal(film.id)}
-              >
-                <Image
-                  src={film.images[0]}
-                  alt={film.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-                <div className="film-info-overlay">
-                  <div className="film-category">{film.type.toUpperCase()}</div>
-                  <div>
-                    <h3 className={`film-title ${!film.subtitle ? 'compact' : ''}`}>{film.title}</h3>
                     {film.subtitle && <p className="film-subtitle">{film.subtitle}</p>}
                     <p className="film-details">
                       {film.duration && film.year ? `${film.duration}, ${film.year}` : 

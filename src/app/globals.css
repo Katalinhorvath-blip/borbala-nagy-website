@@ -617,17 +617,9 @@ button:focus {
 
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
   margin-bottom: 20px;
-}
-
-.works-grid-bottom {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  max-width: 720px;
-  margin: 0 auto;
 }
 
 .film-card {
@@ -879,7 +871,7 @@ button:focus {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 40px;
+  gap: 24px;
   display: flex;
 }
 
@@ -898,7 +890,7 @@ button:focus {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 16px;
+  gap: 12px;
   display: flex;
 }
 
@@ -934,6 +926,70 @@ button:focus {
 .press-highlight {
   font-weight: 700;
   color: #333333;
+}
+
+/* Press Page Title */
+.press-main-title {
+  font-size: 36px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Press Subsection Header */
+.press-subsection-title {
+  font-size: 16px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Press Links Styles */
+.press-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  line-height: 1.6;
+}
+
+.press-link {
+  display: inline;
+  color: #F1574D;
+  text-decoration: underline;
+  font-size: 14px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.press-link:hover {
+  color: #d44439;
+  text-decoration: underline;
+}
+
+.press-links-small {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+
+.press-link-small {
+  display: inline;
+  color: #F1574D;
+  text-decoration: underline;
+  font-size: 13px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.press-link-small:hover {
+  color: #d44439;
+  text-decoration: underline;
 }
 
 /* Copyright Footer */
@@ -1071,8 +1127,7 @@ button:focus {
 /* Works Page Styles */
 .works-container {
   background: #FDF4EC;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 .works-main-content {
@@ -1089,19 +1144,11 @@ button:focus {
   max-width: 1080px;
 }
 
-.works-top-grid {
+.works-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
   margin-bottom: 20px;
-}
-
-.works-bottom-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 1080px;
-  margin: 0 auto;
 }
 
 .film-card {
@@ -1583,14 +1630,17 @@ button:focus {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .works-top-grid {
-    grid-template-columns: 1fr;
-    max-width: 100%;
+@media (max-width: 1024px) {
+  .works-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
   }
-  
-  .works-bottom-grid {
+}
+
+@media (max-width: 768px) {
+  .works-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
     max-width: 100%;
   }
   
