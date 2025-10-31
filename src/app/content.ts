@@ -24,7 +24,9 @@ With patient camerawork, I offer the audience time to observe. My background as 
       language: undefined,
       originalTitle: undefined,
       synopsis: "When a Hitler meme roasting the school's clueless management goes viral, a newly appointed principal finds herself at a crossroads: obey the orders from above and punish the student responsible, or follow her own moral compass—putting her job at risk. Based on real events.",
-      images: ["/images/nothing-to-see-here/image1.png"],
+      images: [
+        "/images/nothing-to-see-here/image1.png"
+      ],
       awards: [
         {
           festival: "BUDAPEST DEBUT FILM FORUM",
@@ -65,7 +67,15 @@ With patient camerawork, I offer the audience time to observe. My background as 
       language: "Hungarian, English, German, French",
       originalTitle: "Mambo Maternica",
       synopsis: "Somewhere in Europe, three Hungarian women are having a difficult day. While navigating life-changing decisions beyond the so-called norm, they are confronted with the issues of late motherhood. On their path toward self-determination, one question echoes: How free are they, really, to live the lives they desire?",
-      images: ["/images/mambo-maternica/image1.png", "/images/mambo-maternica/image2.png", "/images/mambo-maternica/image3.png"],
+      images: [
+        "/images/mambo-maternica/image1.png", 
+        "/images/mambo-maternica/image2.png", 
+        "/images/mambo-maternica/image3.png",
+        "/images/mambo-maternica/image4.png",
+        "/images/mambo-maternica/image5.png",
+        "/images/mambo-maternica/image6.png",
+        "/images/mambo-maternica/image7.png"
+      ],
       awards: [
         {
           festival: "CONNECTING COTTBUS",
@@ -113,7 +123,15 @@ With patient camerawork, I offer the audience time to observe. My background as 
       language: "Hungarian",
       originalTitle: "Pannónia dicsérete",
       synopsis: "A typical literature class in a typical Hungarian school—except today, the entire school is preparing for a visit from the Prime Minister. The school secretary struggles to keep order, especially when the ceremonial cake won't fit in the fridge. Meanwhile Márti, a seemingly unremarkable schoolgirl, hesitantly prepares a small act of rebellion.",
-      images: ["/images/land-of-glory/image1.png"],
+      images: [
+        "/images/land-of-glory/image1.png",
+        "/images/land-of-glory/image2.png",
+        "/images/land-of-glory/image3.png",
+        "/images/land-of-glory/image4.png",
+        "/images/land-of-glory/image5.png",
+        "/images/land-of-glory/image6.png",
+        "/images/land-of-glory/image7.png"
+      ],
       awards: [],
       cast: ["Hanna Angelus", "Nóra Rainer-Micsinyei", "Péter Janklovics", "Zsuzsa Faragó"],
       crew: [
@@ -158,7 +176,14 @@ With patient camerawork, I offer the audience time to observe. My background as 
       language: "Hungarian",
       originalTitle: "Minden rendben",
       synopsis: "On his first day patrolling the border between Hungary and Serbia, Alpár is tasked with protecting his country from refugees. As he faces the harsh realities of life among the border guards, he soon realizes that surviving in this environment means abandoning his humanity.",
-      images: ["/images/everything-alright/image1.png"],
+      images: [
+        "/images/everything-alright/image1.png",
+        "/images/everything-alright/image2.png",
+        "/images/everything-alright/image3.png",
+        "/images/everything-alright/image4.png",
+        "/images/everything-alright/image5.png",
+        "/images/everything-alright/image6.png"
+      ],
       awards: [
         {
           festival: "GERMAN SHORT FILM AWARD",
@@ -214,7 +239,13 @@ With patient camerawork, I offer the audience time to observe. My background as 
       language: "German",
       originalTitle: "Asphaltblumen",
       synopsis: "Over the course of a sleepless night in Berlin, a bizarre encounter unfolds between two misfits, each struggling to escape the grip of loneliness.",
-      images: ["/images/asphalt-flowers/image1.png"],
+      images: [
+        "/images/asphalt-flowers/image1.png",
+        "/images/asphalt-flowers/image2.png",
+        "/images/asphalt-flowers/image3.png",
+        "/images/asphalt-flowers/image4.png",
+        "/images/asphalt-flowers/image5.png"
+      ],
       awards: [
         {
           festival: "START INTERNATIONAL SHORT FILM FESTIVAL",
@@ -250,7 +281,13 @@ With patient camerawork, I offer the audience time to observe. My background as 
       language: "German",
       originalTitle: "Auf Überlandfahrt",
       synopsis: "After their car breaks down, Anton and his friends find themselves stranded in the middle of nowhere. As they pass the time waiting for help, a seemingly innocent game takes an unexpected turn. What follows leaves Anton deeply unsettled, forcing him to confront his own conscience.",
-      images: ["/images/cross-country-drive/image1.png"],
+      images: [
+        "/images/cross-country-drive/image1.png",
+        "/images/cross-country-drive/image2.png",
+        "/images/cross-country-drive/image3.png",
+        "/images/cross-country-drive/image4.png",
+        "/images/cross-country-drive/image5.png"
+      ],
       awards: [],
       cast: ["Sven Scheele", "Benjamin Radjaipour", "Valentin Erb", "Luise Aschenbrenner"],
       crew: [
@@ -287,7 +324,12 @@ With patient camerawork, I offer the audience time to observe. My background as 
       language: "German",
       originalTitle: "Irgendwo Anders",
       synopsis: "Eight-year-old Sebastian has never met his father. Longing for a connection, he escapes into a fantasy world where his parents are still together. But as painful memories of his mother begin to seep in, the illusion starts to crumble—forcing Sebastian to seek answers somewhere else.",
-      images: ["/images/somewhere-else/image1.png"],
+      images: [
+        "/images/somewhere-else/image1.png",
+        "/images/somewhere-else/image2.png",
+        "/images/somewhere-else/image3.png",
+        "/images/somewhere-else/image4.png"
+      ],
       awards: [
         {
           festival: "ACHTUNG BERLIN",
@@ -333,7 +375,13 @@ With patient camerawork, I offer the audience time to observe. My background as 
       language: "German",
       originalTitle: "von mir und dir",
       synopsis: "Lisa and Patrick are close friends. After a night out, they return to her apartment to say goodbye. But when Lisa turns out to be too drunk, Patrick chooses to stay and look after her. As the night unfolds, something shifts between them—changing their relationship in ways neither expected.",
-      images: ["/images/about-me-and-you/image1.png"],
+      images: [
+        "/images/about-me-and-you/image1.png",
+        "/images/about-me-and-you/image2.png",
+        "/images/about-me-and-you/image3.png",
+        "/images/about-me-and-you/image4.png",
+        "/images/about-me-and-you/image5.png"
+      ],
       awards: [],
       cast: ["Benjamin Radjaipour", "Luise Deborah Daberkow"],
       crew: [
@@ -364,7 +412,13 @@ With patient camerawork, I offer the audience time to observe. My background as 
       language: "Hungarian, German",
       originalTitle: "Hannah",
       synopsis: "Two elderly men wander through the Jewish cemetery in Berlin, searching for the grave of their long-lost friend, Hannah, whom they haven't seen in decades. As they make their way among the tombstones, old stories begin to resurface. Nostalgia, jealousy, and a patchwork of memories intertwine as they recall the past, each with their own version of the truth.",
-      images: ["/images/hannah/image1.png"],
+      images: [
+        "/images/hannah/image1.png",
+        "/images/hannah/image2.png",
+        "/images/hannah/image3.png",
+        "/images/hannah/image4.png",
+        "/images/hannah/image5.png"
+      ],
       awards: [],
       cast: ["Miklós Kőniger", "István Hézső", "Javeh Asefdjah"],
       crew: [

@@ -10,6 +10,11 @@ interface Award {
   location: string
 }
 
+interface CrewMember {
+  role: string
+  name: string
+}
+
 interface FilmData {
   id: string
   title: string
@@ -21,12 +26,39 @@ interface FilmData {
   originalTitle?: string
   synopsis: string
   images: string[]
-  awards?: Award[]
-  trailer?: string
-  cast?: string[]
-  crew?: { role: string; name: string }[]
-  festivals?: string[]
+  
+  // Core production info from your document
+  writtenAndDirectedBy?: string
+  directedBy?: string
+  coAuthor?: string
+  script?: string
+  producer?: string
+  coProducers?: string[]
+  directorOfPhotography?: string
+  editing?: string
+  soundDesign?: string
+  originalScore?: string
+  
+  // Cast information
+  mainCast?: string[]
+  
+  // Financing
   financedBy?: string[]
+  
+  // Awards and recognition
+  awards?: Award[]
+  nominee?: string
+  specialMention?: string
+  
+  // Festival information
+  festivals?: string[]
+  invitations?: string[]
+  
+  // Additional notes
+  basedOn?: string
+  
+  // Media
+  trailer?: string
 }
 
 interface FilmModalProps {
@@ -120,16 +152,16 @@ const FilmModal = ({
         <div className="film-modal-content">
           {/* Film Header */}
           <div className="film-modal-header">
-            <h1 className="film-modal-title">{film.title}</h1>
+            <h1 className="film-modal-title">{film.title || 'Untitled'}</h1>
             {film.subtitle && (
               <p className="film-modal-subtitle">{film.subtitle}</p>
             )}
             <div className="film-modal-meta">
-              <span>{film.type}</span>
+              <span>{film.type || 'Film'}</span>
               {film.duration && <><span> | </span><span>{film.duration}</span></>}
               {film.year && <><span> | </span><span>{film.year}</span></>}
               <br />
-              {film.language && <span>{film.language}</span>}
+              <span>Language: {film.language || 'TBD'}</span>
               {film.originalTitle && (
                 <>
                   <br />
@@ -140,72 +172,86 @@ const FilmModal = ({
           </div>
 
           {/* Image Gallery */}
-          {film.images && film.images.length > 0 && film.images[currentImageIndex] && (
-            <div className="film-modal-gallery">
-              <div className="film-modal-main-image">
-                <Image
-                  src={film.images[currentImageIndex]}
-                  alt={`${film.title} - Image ${currentImageIndex + 1}`}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
+          <div className="film-modal-gallery">
+            {film.images && film.images.length > 0 ? (
+              <div className="film-gallery-container">
+                <div className="film-gallery-main">
+                  <div className="film-modal-main-image">
+                    {film.images[currentImageIndex] ? (
+                      <Image
+                        src={film.images[currentImageIndex]}
+                        alt={`${film.title} - Image ${currentImageIndex + 1}`}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                      />
+                    ) : (
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: '#666' }}>
+                        <p>Image not available</p>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {/* Gallery Navigation Arrows */}
+                  {film.images.length > 1 && (
+                    <>
+                      <button 
+                        onClick={() => setCurrentImageIndex(prev => {
+                          const newIndex = prev === 0 ? film.images.length - 1 : prev - 1
+                          return Math.max(0, Math.min(newIndex, film.images.length - 1))
+                        })}
+                        className="gallery-nav gallery-prev"
+                      >
+                        ←
+                      </button>
+                      <button 
+                        onClick={() => setCurrentImageIndex(prev => {
+                          const newIndex = prev === film.images.length - 1 ? 0 : prev + 1
+                          return Math.max(0, Math.min(newIndex, film.images.length - 1))
+                        })}
+                        className="gallery-nav gallery-next"
+                      >
+                        →
+                      </button>
+                    </>
+                  )}
+                </div>
                 
-                {/* Gallery Navigation */}
+                {/* Thumbnail Strip */}
                 {film.images.length > 1 && (
-                  <>
-                    <button 
-                      onClick={() => setCurrentImageIndex(prev => {
-                        const newIndex = prev === 0 ? film.images.length - 1 : prev - 1
-                        return Math.max(0, Math.min(newIndex, film.images.length - 1))
-                      })}
-                      className="gallery-nav gallery-prev"
-                    >
-                      ←
-                    </button>
-                    <button 
-                      onClick={() => setCurrentImageIndex(prev => {
-                        const newIndex = prev === film.images.length - 1 ? 0 : prev + 1
-                        return Math.max(0, Math.min(newIndex, film.images.length - 1))
-                      })}
-                      className="gallery-nav gallery-next"
-                    >
-                      →
-                    </button>
-                  </>
+                  <div className="film-gallery-thumbnails">
+                    {film.images.map((image, index) => (
+                      image ? (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentImageIndex(index)}
+                          className={`thumbnail ${index === currentImageIndex ? 'active' : ''}`}
+                        >
+                          <Image
+                            src={image}
+                            alt={`${film.title} - Thumbnail ${index + 1}`}
+                            fill
+                            style={{ objectFit: 'cover' }}
+                          />
+                        </button>
+                      ) : null
+                    ))}
+                  </div>
                 )}
               </div>
-            </div>
-          )}
-
-          {/* Film Description */}
-          <div className="film-modal-description">
-            <p>{film.synopsis}</p>
+            ) : (
+              <div className="film-modal-main-image" style={{ background: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#666' }}>
+                <p>No images available</p>
+              </div>
+            )}
           </div>
 
-          {/* Awards Section */}
-          {film.awards && film.awards.length > 0 && (
-            <div className="film-modal-awards">
-              <h3>Awards & Selections</h3>
-              <div className="awards-grid">
-                {film.awards.map((award, index) => (
-                  <div key={index} className="award-item">
-                    <div className="award-festival">{award.festival}</div>
-                    <div className="award-title">{award.award}</div>
-                    <div className="award-location">{award.location}</div>
-                    <div className="award-year">{award.year}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Festivals */}
-          {film.festivals && film.festivals.length > 0 && (
-            <div className="film-modal-festivals">
-              <h3>Festivals</h3>
-              <p>{film.festivals.join(', ')}</p>
-            </div>
-          )}
+          {/* Synopsis */}
+          <div className="film-modal-description">
+            <p>{film.synopsis || 'Synopsis to be added'}</p>
+            {film.basedOn && (
+              <p style={{ fontStyle: 'italic', marginTop: '12px' }}>{film.basedOn}</p>
+            )}
+          </div>
 
           {/* Trailer */}
           {film.trailer && (
@@ -225,44 +271,108 @@ const FilmModal = ({
 
           {/* Cast & Crew */}
           <div className="film-modal-credits">
-            <div className="credits-row">
-              {film.cast && film.cast.length > 0 && (
-                <div className="credits-column">
-                  <h4>Cast</h4>
-                  <ul>
-                    {film.cast.map((actor, index) => (
-                      <li key={index}>{actor}</li>
-                    ))}
-                  </ul>
-                </div>
+            {film.mainCast && film.mainCast.length > 0 && (
+              <div className="film-modal-section">
+                <p><strong>Main cast:</strong> {film.mainCast.join(', ')}</p>
+              </div>
+            )}
+            
+            <div className="film-modal-section">
+              {film.writtenAndDirectedBy && (
+                <p><strong>Written & directed by:</strong> {film.writtenAndDirectedBy}</p>
               )}
-              
-              {film.crew && film.crew.length > 0 && (
-                <div className="credits-column">
-                  <h4>Crew</h4>
-                  <ul>
-                    {film.crew.map((person, index) => (
-                      <li key={index}>
-                        <strong>{person.role}:</strong> {person.name}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              {film.directedBy && (
+                <p><strong>Directed by:</strong> {film.directedBy}</p>
+              )}
+              {film.script && (
+                <p><strong>Script:</strong> {film.script}</p>
+              )}
+              {film.coAuthor && (
+                <p><strong>Co-author:</strong> {film.coAuthor}</p>
+              )}
+              {film.producer && (
+                <p><strong>Producer:</strong> {film.producer}</p>
+              )}
+              {film.coProducers && film.coProducers.length > 0 && (
+                <p><strong>Co-producers:</strong> {film.coProducers.join(', ')}</p>
+              )}
+              {film.directorOfPhotography && (
+                <p><strong>Director of Photography:</strong> {film.directorOfPhotography}</p>
+              )}
+              {film.editing && (
+                <p><strong>Editing:</strong> {film.editing}</p>
+              )}
+              {film.soundDesign && (
+                <p><strong>Sound Design:</strong> {film.soundDesign}</p>
+              )}
+              {film.originalScore && (
+                <p><strong>Original Score:</strong> {film.originalScore}</p>
               )}
             </div>
           </div>
 
           {/* Financed By */}
-          {film.financedBy && film.financedBy.length > 0 && (
-            <div className="film-modal-financed">
-              <h4>Financed by</h4>
-              <p>{film.financedBy.join(', ')}</p>
+          <div className="film-modal-section">
+            <h3>Financed by</h3>
+            {film.financedBy && film.financedBy.length > 0 ? (
+              <div>
+                {film.financedBy.map((financier, index) => (
+                  <p key={index}>{financier}</p>
+                ))}
+              </div>
+            ) : (
+              <p style={{ color: '#666', fontStyle: 'italic' }}>Financing information to be updated</p>
+            )}
+          </div>
+
+          {/* Awards */}
+          <div className="film-modal-section">
+            <h3>Awards</h3>
+            {film.awards && film.awards.length > 0 ? (
+              <div>
+                {film.awards.map((award, index) => (
+                  <p key={index}>
+                    <strong>{award.award}</strong> — {award.festival} ({award.location}, {award.year})
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p style={{ color: '#666', fontStyle: 'italic' }}>Awards to be updated</p>
+            )}
+            
+            {film.nominee && (
+              <p><strong>Nominee:</strong> {film.nominee}</p>
+            )}
+            
+            {film.specialMention && (
+              <p><strong>Special mention:</strong> {film.specialMention}</p>
+            )}
+          </div>
+
+          {/* Invitations */}
+          {film.invitations && film.invitations.length > 0 && (
+            <div className="film-modal-section">
+              <h3>Invitations</h3>
+              <div>
+                {film.invitations.map((invitation, index) => (
+                  <p key={index}>{invitation}</p>
+                ))}
+              </div>
             </div>
           )}
 
+          {/* Festivals */}
+          <div className="film-modal-section">
+            <h3>Festivals</h3>
+            {film.festivals && film.festivals.length > 0 ? (
+              <p>{film.festivals.join(', ')}</p>
+            ) : (
+              <p style={{ color: '#666', fontStyle: 'italic' }}>Festival selections to be updated</p>
+            )}
+          </div>
+
           {/* Copyright */}
           <div className="film-modal-footer">
-            <p>Written & directed by Borbála Nagy</p>
             <p>© 2025 Borbála Nagy. All rights reserved.</p>
           </div>
         </div>

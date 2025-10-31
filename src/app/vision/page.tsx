@@ -12,15 +12,15 @@ export default function Vision() {
             <div className="text-container">
               <div className="bio-text">
                 <span className="vision-quote">
-                  &ldquo;Stories shaped by the female gaze create space for more complex, authentic, and diverse portrayals of human experience—fostering empathy and expanding our understanding of the world.&rdquo;
+                  &ldquo;I&apos;m captivated by human nature—people fascinate me. I believe that a person&apos;s true essence is revealed when faced with a moral dilemma. I delve into these pivotal moments, exploring self-confrontation through the societal mirror.&rdquo;
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
-                  In her work, Borbála Nagy challenges unjust social structures, aiming to provoke dialogue, reshape collective narratives, and contribute to a more equitable world. She believes in the power of cinema as a catalyst for meaningful change. Both in her films and on set, she advocates for an open, conscious, and inclusive society.
+                  Dialogue is my playground, where I explore the expressive power of language. My linguistics studies revealed the many facets of languages, which I now use to uncover my characters&apos; inner lives. Language, as a reflection of our history, society, and psyche, is the perfect tool for this exploration.
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
-                  Questions of loneliness, identity, and self-ownership frequently emerge in her movies, while she also delves into themes of gender, migration, the impact of oppression, and the possibilities of resistance. Captivated by human nature, she examines how true character emerges when faced with a moral dilemma. These pivotal moments reveal self-confrontation through the societal mirror and the essence of the individual. Despite the weight of her subjects, she finds humor in everyday absurdities, looking at the world through a lens of irony.
+                  With patient camerawork, I offer the audience time to observe. My background as a stage dancer influenced my understanding of choreography in three dimensions. This experience shapes how I work with actors and the space around them today.
                 </span>
               </div>
             </div>

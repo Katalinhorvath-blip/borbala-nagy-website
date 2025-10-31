@@ -1,7 +1,25 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import Header from '../components/Header'
+import FilmModal from '../components/FilmModal'
+import { content } from '../content'
 
 export default function About() {
+  const [selectedFilm, setSelectedFilm] = useState<string | null>(null)
+
+  const openModal = (filmId: string) => {
+    setSelectedFilm(filmId)
+  }
+
+  const closeModal = () => {
+    setSelectedFilm(null)
+  }
+
+  const selectedFilmData = selectedFilm 
+    ? content.films.find(film => film.id === selectedFilm)
+    : null
   return (
     <div className="page-container-scroll">
       <Header />
@@ -36,13 +54,27 @@ export default function About() {
                 <br/><br/>
                 <span className="bio-text-span">
                   Since then, her films have been invited to festivals worldwide. Her latest short, the political satire{' '}
-                  <span className="bio-text-span-bold">Land of Glory</span>
-                  {' '}won both the German Short Film Award and the Hungarian Film Critics&apos; Prize, and was then broadcasted on HBO and MDR.
+                  <button 
+                    onClick={() => openModal('land-of-glory')}
+                    className="film-link-button"
+                  >
+                    Land of Glory
+                  </button>
+                  , won both the German Short Film Award and the Hungarian Film Critics&apos; Prize, and was then broadcasted on HBO and MDR.
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
-                  Borbála Nagy is an alumna of Cannes Cinéfondation Residence, Berlinale Talents and Talents Sarajevo. She serves as a curator and jury member for various film festivals. Currently, she is completing her first feature{' '}
-                  <span className="bio-text-span-bold">Mambo Maternica</span>
+                  Borbála Nagy is an alumna of Cannes Cinéfondation Residence, Berlinale Talents and Talents Sarajevo, member of the EWA - European Women&apos;s Audiovisual Network. She serves as a curator and jury member for various film festivals.
+                </span>
+                <br/><br/>
+                <span className="bio-text-span">
+                  Currently, she is completing her first feature{' '}
+                  <button 
+                    onClick={() => openModal('mambo-maternica')}
+                    className="film-link-button"
+                  >
+                    Mambo Maternica
+                  </button>
                   —a co-production between Hungary, France, and Germany. Her debut offers a subtle yet sharp exploration of women&apos;s maternal choices in societies with traditional gender roles.
                 </span>
               </div>
@@ -55,6 +87,26 @@ export default function About() {
       <div className="copyright-footer">
         © 2025 Borbála Nagy. All rights reserved.
       </div>
+
+      {/* Film Modal */}
+      {selectedFilmData && (
+        <FilmModal
+          film={selectedFilmData}
+          onClose={closeModal}
+          onNavigate={(direction) => {
+            const currentIndex = content.films.findIndex(f => f.id === selectedFilm)
+            let nextIndex
+            
+            if (direction === 'next') {
+              nextIndex = currentIndex === content.films.length - 1 ? 0 : currentIndex + 1
+            } else {
+              nextIndex = currentIndex === 0 ? content.films.length - 1 : currentIndex - 1
+            }
+            
+            setSelectedFilm(content.films[nextIndex].id)
+          }}
+        />
+      )}
     </div>
   )
 }
