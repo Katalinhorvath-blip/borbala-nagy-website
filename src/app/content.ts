@@ -41,12 +41,18 @@ With patient camerawork, I offer the audience time to observe. My background as 
           location: "Germany"
         }
       ],
-      cast: [],
-      crew: [
-        { role: "Writer & Director", name: "Borbála Nagy" },
-        { role: "Producer", name: "Petra Iványi (Lupa Pictures)" }
-      ],
-      festivals: [
+      
+      // Core production info
+      writtenAndDirectedBy: "Borbála Nagy",
+      
+      // Cast information
+      mainCast: [],
+      
+      // Production team
+      producer: "Petra Iványi (Lupa Pictures)",
+      
+      // Awards and recognition
+      invitations: [
         "Brussels Co-Production Forum (Belgium, 2022)",
         "Cannes Cinéfondation Residence (France, 2021-2022)",
         "Berlin AiR Artist-in-Residence (Israel, 2021)",
@@ -60,12 +66,12 @@ With patient camerawork, I offer the audience time to observe. My background as 
     {
       id: "mambo-maternica",
       title: "MAMBO MATERNICA",
-      subtitle: undefined,
-      type: "Feature | Fiction",
-      duration: "92 min",
+      subtitle: "In post-production",
+      type: "Fiction",
+      duration: "92'",
       year: "In post-production",
       language: "Hungarian, English, German, French",
-      originalTitle: "Mambo Maternica",
+      originalTitle: undefined,
       synopsis: "Somewhere in Europe, three Hungarian women are having a difficult day. While navigating life-changing decisions beyond the so-called norm, they are confronted with the issues of late motherhood. On their path toward self-determination, one question echoes: How free are they, really, to live the lives they desire?",
       images: [
         "/images/mambo-maternica/image1.png", 
@@ -76,49 +82,70 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "/images/mambo-maternica/image6.png",
         "/images/mambo-maternica/image7.png"
       ],
+      
+      // Core production info
+      writtenAndDirectedBy: "Borbála Nagy",
+      
+      // Cast information
+      mainCast: [
+        "Orsolya Török-Illyés", 
+        "Rozália Székely", 
+        "Vera Sipos", 
+        "Zoltán Schmied", 
+        "Bea Lass", 
+        "Kati Zsurzs", 
+        "Fabian Gerhardt", 
+        "Mouloud Ayad", 
+        "Anne-Sophie Marie"
+      ],
+      
+      // Production team
+      producer: "Petra Iványi (Lupa Pictures), Margarita Amineva-Jester (Voices Films)",
+      coProducers: [
+        "Julie Paratian (Sister Productions)", 
+        "Daria Wichmann (DFFB)"
+      ],
+      directorOfPhotography: "Moritz Friese",
+      editing: "László Dunai",
+      soundDesign: "Tamás Bohács",
+      originalScore: "Selma Mutal",
+      
+      // Financing
+      financedBy: [
+        "Inkubátor Debut Film Program – Hungarian National Film Fund (Hungary)",
+        "ALCA Nouvelle Aquitaine (France)",
+        "DFFB - German Film and Television Academy Berlin (Germany)"
+      ],
+      
+      // Awards and recognition
       awards: [
         {
           festival: "CONNECTING COTTBUS",
-          award: "Cannes Producers Network Award",
+          award: "CANNES PRODUCERS NETWORK AWARD",
           year: "2022",
           location: "Germany"
         },
         {
           festival: "BUDAPEST DEBUT FILM FORUM",
-          award: "Most Promising Fiction Feature Project",
+          award: "MOST PROMISING FICTION FEATURE PROJECT",
           year: "2022",
           location: "Hungary"
         }
       ],
-      cast: ["Orsolya Török-Illyés", "Rozália Székely", "Vera Sipos"],
-      crew: [
-        { role: "Written & Directed by", name: "Borbála Nagy" },
-        { role: "Producer", name: "Petra Iványi (Lupa Pictures)" },
-        { role: "Producer", name: "Margarita Amineva-Jester (Voices Films)" },
-        { role: "Co-producer", name: "Julie Paratian (Sister Productions)" },
-        { role: "Co-producer", name: "Daria Wichmann (DFFB)" },
-        { role: "Director of Photography", name: "Moritz Friese" },
-        { role: "Editing", name: "László Dunai" },
-        { role: "Sound Design", name: "Tamás Bohács" },
-        { role: "Original Score", name: "Selma Mutal" }
-      ],
-      festivals: [
+      
+      // Festival invitations and participation
+      invitations: [
         "Full Circle Lab / Nouvelle Aquitaine – script development (France, 2022)",
         "First Cut Lab – work in progress editing consultation (online, 2024)",
         "First Cut+ – work in progress presentation at Karlovy Vary International Film Festival (Czechia, 2024)"
-      ],
-      financedBy: [
-        "Inkubátor Debut Film Program – Hungarian National Film Fund (Hungary)",
-        "ALCA Nouvelle Aquitaine (France)",
-        "DFFB - German Film and Television Academy Berlin (Germany)"
       ]
     },
     {
       id: "land-of-glory",
       title: "LAND OF GLORY",
       subtitle: "(Pannónia dicsérete)",
-      type: "Short | Fiction",
-      duration: "27 min",
+      type: "Fiction",
+      duration: "27'",
       year: "2020",
       language: "Hungarian",
       originalTitle: "Pannónia dicsérete",
@@ -130,18 +157,39 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "/images/land-of-glory/image4.png",
         "/images/land-of-glory/image5.png",
         "/images/land-of-glory/image6.png",
-        "/images/land-of-glory/image7.png"
       ],
+      
+      // Trailer
+      trailer: "https://player.vimeo.com/video/434508735",
+      
+      // Core production info
+      writtenAndDirectedBy: "Borbála Nagy",
+      coAuthor: "Judit Anna Bánházi",
+      
+      // Cast information
+      mainCast: [
+        "Hanna Angelus", 
+        "Nóra Rainer-Micsinyei", 
+        "Péter Janklovics", 
+        "Zsuzsa Faragó"
+      ],
+      
+      // Production team
+      producer: "Margarita Amineva-Jester",
+      directorOfPhotography: "Moritz Friese",
+      editing: "László Dunai",
+      soundDesign: "Tamás Bohács",
+      
+      // Financing
+      financedBy: [
+        "DFFB - German Film and Television Academy Berlin (Germany)",
+        "Norbert Janssen Stiftung (Germany)"
+      ],
+      
+      // Awards and recognition
       awards: [],
-      cast: ["Hanna Angelus", "Nóra Rainer-Micsinyei", "Péter Janklovics", "Zsuzsa Faragó"],
-      crew: [
-        { role: "Written & Directed by", name: "Borbála Nagy" },
-        { role: "Co-author", name: "Judit Anna Bánházi" },
-        { role: "Producer", name: "Margarita Amineva-Jester" },
-        { role: "Director of Photography", name: "Moritz Friese" },
-        { role: "Editing", name: "László Dunai" },
-        { role: "Sound Design", name: "Tamás Bohács" }
-      ],
+      
+      // Festival selections
       festivals: [
         "Filmfestival Max Ophüls Preis (Germany)",
         "Filmfest Dresden (Germany)",
@@ -160,18 +208,14 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "Cinemira (Hungary)",
         "Filmtettfeszt (Romania)",
         "Visionär (Germany)"
-      ],
-      financedBy: [
-        "DFFB - German Film and Television Academy Berlin (Germany)",
-        "Norbert Janssen Stiftung (Germany)"
       ]
     },
     {
       id: "everything-alright",
       title: "EVERYTHING ALRIGHT",
       subtitle: "(Minden rendben)",
-      type: "Short | Fiction",
-      duration: "13 min",
+      type: "Fiction",
+      duration: "13'",
       year: "2019",
       language: "Hungarian",
       originalTitle: "Minden rendben",
@@ -184,6 +228,32 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "/images/everything-alright/image5.png",
         "/images/everything-alright/image6.png"
       ],
+      
+      // Trailer
+      trailer: "https://player.vimeo.com/video/258494620",
+      
+      // Core production info
+      writtenAndDirectedBy: "Borbála Nagy",
+      
+      // Cast information
+      mainCast: [
+        "Benett Vilmányi", 
+        "Ákos Orosz"
+      ],
+      
+      // Production team
+      producer: "Luise Hauschild",
+      directorOfPhotography: "Constantin Campean",
+      editing: "László Dunai",
+      soundDesign: "Tamás Bohács",
+      
+      // Financing
+      financedBy: [
+        "DFFB - German Film and Television Academy Berlin (Germany)",
+        "Goethe Institut (Germany)"
+      ],
+      
+      // Awards and recognition
       awards: [
         {
           festival: "GERMAN SHORT FILM AWARD",
@@ -198,14 +268,8 @@ With patient camerawork, I offer the audience time to observe. My background as 
           location: "Germany"
         }
       ],
-      cast: ["Benett Vilmányi", "Ákos Orosz"],
-      crew: [
-        { role: "Written & Directed by", name: "Borbála Nagy" },
-        { role: "Producer", name: "Luise Hauschild" },
-        { role: "Director of Photography", name: "Constantin Campean" },
-        { role: "Editing", name: "László Dunai" },
-        { role: "Sound Design", name: "Tamás Bohács" }
-      ],
+      
+      // Festival selections
       festivals: [
         "Tiburon Film Festival (USA)",
         "Tampere Film Festival (Finland)",
@@ -223,18 +287,14 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "Festival of Tolerance (Croatia)",
         "Landshut Short Film Festival (Germany)",
         "International Short Film Week Regensburg (Germany)"
-      ],
-      financedBy: [
-        "DFFB - German Film and Television Academy Berlin (Germany)",
-        "Goethe Institut (Germany)"
       ]
     },
     {
       id: "asphalt-flowers",
       title: "ASPHALT FLOWERS",
       subtitle: "(Asphaltblumen)",
-      type: "Short | Fiction",
-      duration: "18 min",
+      type: "Fiction",
+      duration: "18'",
       year: "2018",
       language: "German",
       originalTitle: "Asphaltblumen",
@@ -246,6 +306,28 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "/images/asphalt-flowers/image4.png",
         "/images/asphalt-flowers/image5.png"
       ],
+      
+      // Core production info
+      writtenAndDirectedBy: "Borbála Nagy",
+      
+      // Cast information
+      mainCast: [
+        "Daniel Klausner", 
+        "Kim Schnitzer"
+      ],
+      
+      // Production team
+      directorOfPhotography: "Constantin Campean",
+      editing: "Borbála Nagy",
+      soundDesign: "Andor Horváth",
+      originalScore: "Endre Vazul Mándli",
+      
+      // Financing
+      financedBy: [
+        "DFFB - German Film and Television Academy Berlin (Germany)"
+      ],
+      
+      // Awards and recognition
       awards: [
         {
           festival: "START INTERNATIONAL SHORT FILM FESTIVAL",
@@ -254,29 +336,20 @@ With patient camerawork, I offer the audience time to observe. My background as 
           location: "Baku, Azerbaijan"
         }
       ],
-      cast: ["Daniel Klausner", "Kim Schnitzer"],
-      crew: [
-        { role: "Written & Directed by", name: "Borbála Nagy" },
-        { role: "Director of Photography", name: "Constantin Campean" },
-        { role: "Editing", name: "Borbála Nagy" },
-        { role: "Sound Design", name: "Andor Horváth" },
-        { role: "Original Score", name: "Endre Vazul Mándli" }
-      ],
+      
+      // Festival selections
       festivals: [
         "Lubuskie Film Summer (Poland)",
         "Oderkurz - Filmspektakel (Germany)",
         "DocLisboa International Film Festival (Portugal)"
-      ],
-      financedBy: [
-        "DFFB - German Film and Television Academy Berlin (Germany)"
       ]
     },
     {
       id: "cross-country-drive",
       title: "CROSS-COUNTRY DRIVE",
       subtitle: "(Auf Überlandfahrt)",
-      type: "Short | Fiction",
-      duration: "20 min",
+      type: "Fiction",
+      duration: "20'",
       year: "2016",
       language: "German",
       originalTitle: "Auf Überlandfahrt",
@@ -288,17 +361,38 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "/images/cross-country-drive/image4.png",
         "/images/cross-country-drive/image5.png"
       ],
-      awards: [],
-      cast: ["Sven Scheele", "Benjamin Radjaipour", "Valentin Erb", "Luise Aschenbrenner"],
-      crew: [
-        { role: "Written & Directed by", name: "Borbála Nagy" },
-        { role: "Co-author", name: "Sabina Gröner" },
-        { role: "Producer", name: "Senem Göcmen" },
-        { role: "Director of Photography", name: "Faraz Fesharaki" },
-        { role: "Editing", name: "Borbála Nagy" },
-        { role: "Sound Design", name: "Tamás Bohács" },
-        { role: "Original Score", name: "Endre Vazul Mándli" }
+      
+      // Trailer
+      trailer: "https://player.vimeo.com/video/194277577",
+      
+      // Core production info
+      writtenAndDirectedBy: "Borbála Nagy",
+      coAuthor: "Sabina Gröner",
+      
+      // Cast information
+      mainCast: [
+        "Sven Scheele", 
+        "Benjamin Radjaipour", 
+        "Valentin Erb", 
+        "Luise Aschenbrenner"
       ],
+      
+      // Production team
+      producer: "Senem Göcmen",
+      directorOfPhotography: "Faraz Fesharaki",
+      editing: "Borbála Nagy",
+      soundDesign: "Tamás Bohács",
+      originalScore: "Endre Vazul Mándli",
+      
+      // Financing
+      financedBy: [
+        "DFFB - German Film and Television Academy Berlin (Germany)"
+      ],
+      
+      // Awards and recognition
+      awards: [],
+      
+      // Festival selections
       festivals: [
         "International Film Festival Etiuda&Anima (Poland)",
         "Mecal pro Barcelona IFF (Spain)",
@@ -309,17 +403,14 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "Lubuskie Film Summer (Poland)",
         "Cinema City IFF (Serbia)",
         "First Step Film Festival (Albania)"
-      ],
-      financedBy: [
-        "DFFB - German Film and Television Academy Berlin (Germany)"
       ]
     },
     {
       id: "somewhere-else",
       title: "SOMEWHERE ELSE",
       subtitle: "(Irgendwo Anders)",
-      type: "Short | Fiction",
-      duration: "20 min",
+      type: "Fiction",
+      duration: "20'",
       year: "2015",
       language: "German",
       originalTitle: "Irgendwo Anders",
@@ -328,8 +419,37 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "/images/somewhere-else/image1.png",
         "/images/somewhere-else/image2.png",
         "/images/somewhere-else/image3.png",
-        "/images/somewhere-else/image4.png"
+        "/images/somewhere-else/image4.png",
+        "/images/somewhere-else/image5.png"
       ],
+      
+      // Trailer
+      trailer: "https://player.vimeo.com/video/133333994",
+      
+      // Core production info
+      writtenAndDirectedBy: "Borbála Nagy",
+      coAuthor: "Halina Joanna Rasinski",
+      
+      // Cast information
+      mainCast: [
+        "Vin Kumorek", 
+        "Tinka Fürst", 
+        "Levente Orbán"
+      ],
+      
+      // Production team
+      producer: "Margarita Amineva-Jester",
+      directorOfPhotography: "Marianne Andrea Borowiec",
+      editing: "Borbála Nagy, Máté Feles",
+      soundDesign: "Tamás Bohács",
+      originalScore: "Boti Ikvai-Szabó",
+      
+      // Financing
+      financedBy: [
+        "DFFB - German Film and Television Academy Berlin (Germany)"
+      ],
+      
+      // Awards and recognition
       awards: [
         {
           festival: "ACHTUNG BERLIN",
@@ -338,16 +458,8 @@ With patient camerawork, I offer the audience time to observe. My background as 
           location: "Germany"
         }
       ],
-      cast: ["Vin Kumorek", "Tinka Fürst", "Levente Orbán"],
-      crew: [
-        { role: "Written & Directed by", name: "Borbála Nagy" },
-        { role: "Co-author", name: "Halina Joanna Rasinski" },
-        { role: "Producer", name: "Margarita Amineva-Jester" },
-        { role: "Director of Photography", name: "Marianne Andrea Borowiec" },
-        { role: "Editing", name: "Borbála Nagy, Máté Feles" },
-        { role: "Sound Design", name: "Tamás Bohács" },
-        { role: "Original Score", name: "Boti Ikvai-Szabó" }
-      ],
+      
+      // Festival selections
       festivals: [
         "FIPA – Festival international de programmes audiovisuels (France)",
         "Zsigmond Vilmos Film Festival (Hungary)",
@@ -360,17 +472,14 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "Córtex Film Festival (Portugal)",
         "Short Screens (Belgium)",
         "Slow Film Fest (Hungary)"
-      ],
-      financedBy: [
-        "DFFB - German Film and Television Academy Berlin (Germany)"
       ]
     },
     {
       id: "about-me-and-you",
       title: "ABOUT ME AND YOU",
       subtitle: "(von mir und dir)",
-      type: "Short | Fiction",
-      duration: "14 min",
+      type: "Fiction",
+      duration: "14'",
       year: "2015",
       language: "German",
       originalTitle: "von mir und dir",
@@ -382,32 +491,48 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "/images/about-me-and-you/image4.png",
         "/images/about-me-and-you/image5.png"
       ],
-      awards: [],
-      cast: ["Benjamin Radjaipour", "Luise Deborah Daberkow"],
-      crew: [
-        { role: "Directed by", name: "Borbála Nagy" },
-        { role: "Script", name: "Borbála Nagy, Sabina Gröner" },
-        { role: "Director of Photography", name: "Moritz Friese" },
-        { role: "Editing", name: "Borbála Nagy" },
-        { role: "Sound Design", name: "Tamás Bohács" },
-        { role: "Original Score", name: "Boti Ikvai-Szabó" }
+      
+      // Trailer
+      trailer: "https://player.vimeo.com/video/133163847",
+      
+      // Core production info
+      directedBy: "Borbála Nagy",
+      script: "Borbála Nagy, Sabina Gröner",
+      
+      // Cast information
+      mainCast: [
+        "Benjamin Radjaipour", 
+        "Luise Deborah Daberkow"
       ],
+      
+      // Production team
+      directorOfPhotography: "Moritz Friese",
+      editing: "Borbála Nagy",
+      soundDesign: "Tamás Bohács",
+      originalScore: "Boti Ikvai-Szabó",
+      
+      // Financing
+      financedBy: [
+        "DFFB - German Film and Television Academy Berlin (Germany)"
+      ],
+      
+      // Awards and recognition
+      awards: [],
+      
+      // Festival selections
       festivals: [
         "International Film Festival Tofifest (Poland)",
         "Copenhagen Short Film Festival (Denmark)",
         "Gässli Film Festival (Switzerland)",
         "Flensburger Kurzfilmtage (Germany)"
-      ],
-      financedBy: [
-        "DFFB - German Film and Television Academy Berlin (Germany)"
       ]
     },
     {
       id: "hannah",
       title: "HANNAH",
       subtitle: undefined,
-      type: "Short | Fiction",
-      duration: "7 min",
+      type: "Fiction",
+      duration: "7'",
       year: "2013",
       language: "Hungarian, German",
       originalTitle: "Hannah",
@@ -419,19 +544,36 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "/images/hannah/image4.png",
         "/images/hannah/image5.png"
       ],
-      awards: [],
-      cast: ["Miklós Kőniger", "István Hézső", "Javeh Asefdjah"],
-      crew: [
-        { role: "Written & Directed by", name: "Borbála Nagy" },
-        { role: "Co-author", name: "Halina Joanna Rasinski" },
-        { role: "Director of Photography", name: "Susanne Heinrich" },
-        { role: "Editing", name: "Borbála Nagy" },
-        { role: "Sound Design", name: "Tamás Bohács" }
+      
+      // Trailer
+      trailer: "https://player.vimeo.com/video/133333993",
+      
+      // Core production info
+      writtenAndDirectedBy: "Borbála Nagy",
+      coAuthor: "Halina Joanna Rasinski",
+      
+      // Cast information
+      mainCast: [
+        "Miklós Kőniger", 
+        "István Hézső", 
+        "Javeh Asefdjah"
       ],
-      festivals: [],
+      
+      // Production team
+      directorOfPhotography: "Susanne Heinrich",
+      editing: "Borbála Nagy",
+      soundDesign: "Tamás Bohács",
+      
+      // Financing
       financedBy: [
         "DFFB - German Film and Television Academy Berlin (Germany)"
-      ]
+      ],
+      
+      // Awards and recognition
+      awards: [],
+      
+      // Festival selections
+      festivals: []
     }
   ]
 }

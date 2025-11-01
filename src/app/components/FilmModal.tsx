@@ -124,14 +124,6 @@ const FilmModal = ({
         {/* Navigation and Close Buttons */}
         <div className="film-modal-nav">
           <button 
-            onClick={onClose}
-            className="film-modal-close"
-            aria-label="Close modal"
-          >
-            ✕
-          </button>
-          
-          <button 
             onClick={() => onNavigate('prev')}
             className="film-modal-arrow film-modal-prev"
             aria-label="Previous film"
@@ -146,6 +138,15 @@ const FilmModal = ({
           >
             →
           </button>
+
+                    <button 
+            onClick={onClose}
+            className="film-modal-close"
+            aria-label="Close modal"
+          >
+            ✕
+          </button>
+          
         </div>
 
         {/* Modal Content */}
@@ -182,7 +183,7 @@ const FilmModal = ({
                         src={film.images[currentImageIndex]}
                         alt={`${film.title} - Image ${currentImageIndex + 1}`}
                         fill
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'contain' }}
                       />
                     ) : (
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: '#666' }}>
@@ -253,10 +254,43 @@ const FilmModal = ({
             )}
           </div>
 
+          {/* Awards */}
+          {film.awards && film.awards.length > 0 && (
+            <div className="film-modal-section">
+              <h3>Awards</h3>
+              <div>
+                {film.awards.map((award, index) => (
+                  <p key={index}>
+                    <strong>{award.award}</strong> — {award.festival} ({award.location}, {award.year})
+                  </p>
+                ))}
+              </div>
+              
+              {film.nominee && (
+                <p><strong>Nominee:</strong> {film.nominee}</p>
+              )}
+              
+              {film.specialMention && (
+                <p><strong>Special mention:</strong> {film.specialMention}</p>
+              )}
+            </div>
+          )}
+
+          {/* Invitations */}
+          {film.invitations && film.invitations.length > 0 && (
+            <div className="film-modal-section">
+              <h3>Invitations</h3>
+              <div>
+                {film.invitations.map((invitation, index) => (
+                  <p key={index}>{invitation}</p>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Trailer */}
           {film.trailer && (
             <div className="film-modal-trailer">
-              <h3>Trailer</h3>
               <div className="trailer-container">
                 <iframe
                   src={film.trailer}
@@ -273,11 +307,17 @@ const FilmModal = ({
           <div className="film-modal-credits">
             {film.mainCast && film.mainCast.length > 0 && (
               <div className="film-modal-section">
-                <p><strong>Main cast:</strong> {film.mainCast.join(', ')}</p>
+                <h3>Main cast</h3>
+                <div className="cast-list-centered">
+                  {film.mainCast.map((actor, index) => (
+                    <p key={index}>{actor}</p>
+                  ))}
+                </div>
               </div>
             )}
             
             <div className="film-modal-section">
+              <h3>Production team</h3>
               {film.writtenAndDirectedBy && (
                 <p><strong>Written & directed by:</strong> {film.writtenAndDirectedBy}</p>
               )}
@@ -312,64 +352,24 @@ const FilmModal = ({
           </div>
 
           {/* Financed By */}
-          <div className="film-modal-section">
-            <h3>Financed by</h3>
-            {film.financedBy && film.financedBy.length > 0 ? (
+          {film.financedBy && film.financedBy.length > 0 && (
+            <div className="film-modal-section">
+              <h3>Financed by</h3>
               <div>
                 {film.financedBy.map((financier, index) => (
                   <p key={index}>{financier}</p>
-                ))}
-              </div>
-            ) : (
-              <p style={{ color: '#666', fontStyle: 'italic' }}>Financing information to be updated</p>
-            )}
-          </div>
-
-          {/* Awards */}
-          <div className="film-modal-section">
-            <h3>Awards</h3>
-            {film.awards && film.awards.length > 0 ? (
-              <div>
-                {film.awards.map((award, index) => (
-                  <p key={index}>
-                    <strong>{award.award}</strong> — {award.festival} ({award.location}, {award.year})
-                  </p>
-                ))}
-              </div>
-            ) : (
-              <p style={{ color: '#666', fontStyle: 'italic' }}>Awards to be updated</p>
-            )}
-            
-            {film.nominee && (
-              <p><strong>Nominee:</strong> {film.nominee}</p>
-            )}
-            
-            {film.specialMention && (
-              <p><strong>Special mention:</strong> {film.specialMention}</p>
-            )}
-          </div>
-
-          {/* Invitations */}
-          {film.invitations && film.invitations.length > 0 && (
-            <div className="film-modal-section">
-              <h3>Invitations</h3>
-              <div>
-                {film.invitations.map((invitation, index) => (
-                  <p key={index}>{invitation}</p>
                 ))}
               </div>
             </div>
           )}
 
           {/* Festivals */}
-          <div className="film-modal-section">
-            <h3>Festivals</h3>
-            {film.festivals && film.festivals.length > 0 ? (
+          {film.festivals && film.festivals.length > 0 && (
+            <div className="film-modal-section">
+              <h3>Festivals</h3>
               <p>{film.festivals.join(', ')}</p>
-            ) : (
-              <p style={{ color: '#666', fontStyle: 'italic' }}>Festival selections to be updated</p>
-            )}
-          </div>
+            </div>
+          )}
 
           {/* Copyright */}
           <div className="film-modal-footer">
