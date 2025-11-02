@@ -9,6 +9,7 @@ interface Award {
   year: string
   location: string
   highlighted?: boolean
+  featured?: boolean
   image?: string
 }
 
@@ -277,13 +278,43 @@ const FilmModal = ({
             <div className="film-modal-section">
               <h3>Awards</h3>
               
-              {/* Highlighted Awards in a row */}
-              {film.awards.some(award => award.highlighted) && (
+              {/* Featured Awards - Special prominence for first two */}
+              {film.awards.some(award => award.featured) && (
+                <div className="featured-awards-container">
+                  {film.awards
+                    .filter(award => award.featured)
+                    .map((award, index) => (
+                      <div key={`featured-${index}`} className="featured-award">
+                        {award.image && (
+                          <div className="featured-image">
+                            <Image
+                              src={award.image}
+                              alt={`${award.award} - ${award.festival}`}
+                              width={250}
+                              height={167}
+                              style={{ objectFit: 'contain' }}
+                            />
+                          </div>
+                        )}
+                        <div className="featured-text">
+                          <p><strong>{award.award}</strong></p>
+                          <p>{award.festival}</p>
+                          {(award.location || award.year) && (
+                            <p>{[award.location, award.year].filter(Boolean).join(', ')}</p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              )}
+              
+              {/* Other Highlighted Awards in a row */}
+              {film.awards.some(award => award.highlighted && !award.featured) && (
                 <div className={`highlighted-items-container ${
-                  (film.awards?.filter(award => award.highlighted).length === 2) ? 'two-items' : ''
+                  (film.awards?.filter(award => award.highlighted && !award.featured).length === 2) ? 'two-items' : ''
                 }`}>
                   {film.awards
-                    .filter(award => award.highlighted)
+                    .filter(award => award.highlighted && !award.featured)
                     .map((award, index) => (
                       <div key={`highlighted-${index}`} className="highlighted-item">
                         {award.image && (
@@ -291,8 +322,8 @@ const FilmModal = ({
                             <Image
                               src={award.image}
                               alt={`${award.award} - ${award.festival}`}
-                              width={(film.awards?.filter(award => award.highlighted).length === 2) ? 200 : 150}
-                              height={(film.awards?.filter(award => award.highlighted).length === 2) ? 133 : 100}
+                              width={(film.awards?.filter(award => award.highlighted && !award.featured).length === 2) ? 200 : 150}
+                              height={(film.awards?.filter(award => award.highlighted && !award.featured).length === 2) ? 133 : 100}
                               style={{ objectFit: 'contain' }}
                             />
                           </div>

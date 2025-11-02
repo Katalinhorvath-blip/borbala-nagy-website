@@ -1616,6 +1616,73 @@ button:focus {
   transform: translateY(-50%) scale(1.05);
 }
 
+/* Featured Awards - Special prominence for top awards */
+.featured-awards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 30px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(241, 87, 77, 0.08) 0%, rgba(125, 180, 236, 0.08) 100%);
+  border-radius: 8px;
+  border: 2px solid rgba(241, 87, 77, 0.2);
+}
+
+.featured-award {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 280px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  border: 1px solid rgba(241, 87, 77, 0.3);
+  transition: all 0.3s ease;
+}
+
+.featured-award:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(241, 87, 77, 0.15);
+  border-color: rgba(241, 87, 77, 0.5);
+}
+
+.featured-image {
+  text-align: center;
+  margin-bottom: 12px;
+  background: none;
+  padding: 0;
+}
+
+.featured-text p {
+  margin: 4px 0;
+  font-weight: 400;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+  line-height: 22px;
+}
+
+.featured-text strong {
+  color: #EF484E;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Responsive featured awards */
+@media (max-width: 768px) {
+  .featured-awards-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .featured-award {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 /* Highlighted items for Awards and Invitations */
 .highlighted-items-container {
   display: flex;

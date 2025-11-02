@@ -227,6 +227,7 @@ const staticFilmsData = [
           year: "",
           location: "",
           highlighted: true,
+          featured: true,
           image: "/images/awards/German_short_fil_award.png"
         },
         {
@@ -235,6 +236,7 @@ const staticFilmsData = [
           year: "",
           location: "",
           highlighted: true,
+          featured: true,
           image: "/images/awards/Hungarian_film_critics.jpg"
         },
         {
@@ -369,8 +371,7 @@ const staticFilmsData = [
         "/images/everything-alright/image1.png",
         "/images/everything-alright/image2.png",
         "/images/everything-alright/image3.png",
-        "/images/everything-alright/image4.png",
-        "/images/everything-alright/image5.png"
+        "/images/everything-alright/image4.png"
       ],
       
       // Trailer
@@ -445,7 +446,7 @@ const staticFilmsData = [
       year: "2018",
       language: "German",
       originalTitle: "Asphaltblumen",
-      synopsis: "Over the course of a sleepless night in Berlin, a bizarre encounter unfolds between two misfits, each struggling to escape the grip of loneliness.",
+      synopsis: "Over the course of a sleepless night in Berlin, a bizarre encounter unfolds between two misfits, each struggling to escape the grip of loneliness. Based on a poem by György Petri.",
       images: [
         "/images/asphalt-flowers/image1.png",
         "/images/asphalt-flowers/image2.png",
@@ -480,7 +481,9 @@ const staticFilmsData = [
           festival: "START INTERNATIONAL SHORT FILM FESTIVAL",
           award: "Diploma of the jury",
           year: "2018",
-          location: "Baku, Azerbaijan"
+          location: "Baku, Azerbaijan",
+          highlighted: true,
+          image: "/images/awards/baku.png"
         }
       ],
       
