@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import ImageSlider from './components/ImageSlider'
 import FilmModal from './components/FilmModal'
-import { content } from './content'
+import { films } from './content'
 
 export default function Home() {
   const [selectedFilm, setSelectedFilm] = useState<string | null>(null)
@@ -18,7 +18,7 @@ export default function Home() {
   }
 
   const selectedFilmData = selectedFilm 
-    ? content.films.find(film => film.id === selectedFilm)
+    ? films.find(film => film.id === selectedFilm)
     : null
 
   return (
@@ -83,16 +83,16 @@ export default function Home() {
           film={selectedFilmData}
           onClose={closeModal}
           onNavigate={(direction) => {
-            const currentIndex = content.films.findIndex(f => f.id === selectedFilm)
+            const currentIndex = films.findIndex(f => f.id === selectedFilm)
             let nextIndex
             
             if (direction === 'next') {
-              nextIndex = currentIndex === content.films.length - 1 ? 0 : currentIndex + 1
+              nextIndex = currentIndex === films.length - 1 ? 0 : currentIndex + 1
             } else {
-              nextIndex = currentIndex === 0 ? content.films.length - 1 : currentIndex - 1
+              nextIndex = currentIndex === 0 ? films.length - 1 : currentIndex - 1
             }
             
-            setSelectedFilm(content.films[nextIndex].id)
+            setSelectedFilm(films[nextIndex].id)
           }}
         />
       )}

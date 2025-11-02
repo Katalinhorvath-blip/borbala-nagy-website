@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Header from '../components/Header'
 import Image from 'next/image'
-import { content } from '../content'
+import { films } from '../content'
 import FilmModal from '../components/FilmModal'
 
 export default function Works() {
@@ -18,7 +18,7 @@ export default function Works() {
   }
 
   const selectedFilmData = selectedFilm 
-    ? content.films.find(film => film.id === selectedFilm)
+    ? films.find(film => film.id === selectedFilm)
     : null
 
   return (
@@ -31,7 +31,7 @@ export default function Works() {
         <div className="works-grid-container">
           {/* Single responsive grid for all films */}
           <div className="works-grid">
-            {content.films.map((film) => (
+            {films.map((film) => (
               <div 
                 key={film.id} 
                 className="film-card"
@@ -72,16 +72,16 @@ export default function Works() {
           film={selectedFilmData}
           onClose={closeModal}
           onNavigate={(direction) => {
-            const currentIndex = content.films.findIndex(f => f.id === selectedFilm)
+            const currentIndex = films.findIndex(f => f.id === selectedFilm)
             let nextIndex
             
             if (direction === 'next') {
-              nextIndex = currentIndex === content.films.length - 1 ? 0 : currentIndex + 1
+              nextIndex = currentIndex === films.length - 1 ? 0 : currentIndex + 1
             } else {
-              nextIndex = currentIndex === 0 ? content.films.length - 1 : currentIndex - 1
+              nextIndex = currentIndex === 0 ? films.length - 1 : currentIndex - 1
             }
             
-            setSelectedFilm(content.films[nextIndex].id)
+            setSelectedFilm(films[nextIndex].id)
           }}
         />
       )}

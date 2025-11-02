@@ -29,15 +29,7 @@ export default function Contact() {
                 <h3 className="press-subsection-title">Professional Links</h3>
                 <div className="press-links">
                   <a 
-                    href="https://www.instagram.com/borbalanagy_filmmaker" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="press-link"
-                  >
-                    Instagram
-                  </a>
-                  <a 
-                    href="https://www.linkedin.com/in/borbala-nagy" 
+                    href="https://www.linkedin.com/in/borb%C3%A1la-nagy-07a55a111/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="press-link"

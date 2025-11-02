@@ -1599,6 +1599,64 @@ button:focus {
   transform: translateY(-50%) scale(1.05);
 }
 
+/* Highlighted items for Awards and Invitations */
+.highlighted-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.highlighted-item {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  margin: 0;
+  box-shadow: none;
+  transition: none;
+  flex: 0 1 auto;
+  min-width: 150px;
+  max-width: 200px;
+}
+
+/* Larger size when there are only 2 items */
+.highlighted-items-container.two-items .highlighted-item {
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.highlighted-item:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.highlight-image {
+  text-align: center;
+  margin-bottom: 5px;
+  border-radius: 0;
+  overflow: visible;
+  background: none;
+  padding: 0;
+}
+
+.highlighted-item p {
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  line-height: 20px;
+}
+
+.highlighted-item strong {
+  color: #333;
+  font-weight: 600;
+}
+
 .film-modal-festivals {
   margin-bottom: 40px;
   text-align: center;

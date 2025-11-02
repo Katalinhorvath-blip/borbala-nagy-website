@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Header from '../components/Header'
 import FilmModal from '../components/FilmModal'
-import { content } from '../content'
+import { films } from '../content'
 
 export default function About() {
   const [selectedFilm, setSelectedFilm] = useState<string | null>(null)
@@ -18,7 +18,7 @@ export default function About() {
   }
 
   const selectedFilmData = selectedFilm 
-    ? content.films.find(film => film.id === selectedFilm)
+    ? films.find(film => film.id === selectedFilm)
     : null
   return (
     <div className="page-container-scroll">
@@ -94,16 +94,16 @@ export default function About() {
           film={selectedFilmData}
           onClose={closeModal}
           onNavigate={(direction) => {
-            const currentIndex = content.films.findIndex(f => f.id === selectedFilm)
+            const currentIndex = films.findIndex(f => f.id === selectedFilm)
             let nextIndex
             
             if (direction === 'next') {
-              nextIndex = currentIndex === content.films.length - 1 ? 0 : currentIndex + 1
+              nextIndex = currentIndex === films.length - 1 ? 0 : currentIndex + 1
             } else {
-              nextIndex = currentIndex === 0 ? content.films.length - 1 : currentIndex - 1
+              nextIndex = currentIndex === 0 ? films.length - 1 : currentIndex - 1
             }
             
-            setSelectedFilm(content.films[nextIndex].id)
+            setSelectedFilm(films[nextIndex].id)
           }}
         />
       )}

@@ -8,6 +8,23 @@ interface Award {
   award: string
   year: string
   location: string
+  highlighted?: boolean
+  image?: string
+}
+
+interface Nomination {
+  festival: string
+  nomination: string
+  year: string
+  location: string
+  highlighted?: boolean
+  image?: string
+}
+
+interface Invitation {
+  name: string
+  highlighted?: boolean
+  image?: string
 }
 
 interface CrewMember {
@@ -44,15 +61,17 @@ interface FilmData {
   
   // Financing
   financedBy?: string[]
+  fundedBy?: string[]
   
   // Awards and recognition
   awards?: Award[]
+  nominations?: Nomination[]
   nominee?: string
   specialMention?: string
   
   // Festival information
   festivals?: string[]
-  invitations?: string[]
+  invitations?: (string | Invitation)[]
   
   // Additional notes
   basedOn?: string
@@ -258,12 +277,44 @@ const FilmModal = ({
           {film.awards && film.awards.length > 0 && (
             <div className="film-modal-section">
               <h3>Awards</h3>
+              
+              {/* Highlighted Awards in a row */}
+              {film.awards.some(award => award.highlighted) && (
+                <div className={`highlighted-items-container ${
+                  film.awards.filter(award => award.highlighted).length === 2 ? 'two-items' : ''
+                }`}>
+                  {film.awards
+                    .filter(award => award.highlighted)
+                    .map((award, index) => (
+                      <div key={`highlighted-${index}`} className="highlighted-item">
+                        {award.image && (
+                          <div className="highlight-image">
+                            <Image
+                              src={award.image}
+                              alt={`${award.award} - ${award.festival}`}
+                              width={film.awards.filter(award => award.highlighted).length === 2 ? 200 : 150}
+                              height={film.awards.filter(award => award.highlighted).length === 2 ? 133 : 100}
+                              style={{ objectFit: 'contain' }}
+                            />
+                          </div>
+                        )}
+                        <p>
+                          <strong>{award.award}</strong> — {award.festival} ({award.location}, {award.year})
+                        </p>
+                      </div>
+                    ))}
+                </div>
+              )}
+              
+              {/* Regular Awards */}
               <div>
-                {film.awards.map((award, index) => (
-                  <p key={index}>
-                    <strong>{award.award}</strong> — {award.festival} ({award.location}, {award.year})
-                  </p>
-                ))}
+                {film.awards
+                  .filter(award => !award.highlighted)
+                  .map((award, index) => (
+                    <p key={`regular-${index}`}>
+                      <strong>{award.award}</strong> — {award.festival} ({award.location}, {award.year})
+                    </p>
+                  ))}
               </div>
               
               {film.nominee && (
@@ -276,14 +327,110 @@ const FilmModal = ({
             </div>
           )}
 
+          {/* Nominations */}
+          {film.nominations && film.nominations.length > 0 && (
+            <div className="film-modal-section">
+              <h3>Nominations</h3>
+              
+              {/* Highlighted Nominations in a row */}
+              {film.nominations.some(nomination => nomination.highlighted) && (
+                <div className={`highlighted-items-container ${
+                  film.nominations.filter(nomination => nomination.highlighted).length === 2 ? 'two-items' : ''
+                }`}>
+                  {film.nominations
+                    .filter(nomination => nomination.highlighted)
+                    .map((nomination, index) => (
+                      <div key={`highlighted-${index}`} className="highlighted-item">
+                        {nomination.image && (
+                          <div className="highlight-image">
+                            <Image
+                              src={nomination.image}
+                              alt={`${nomination.nomination} - ${nomination.festival}`}
+                              width={film.nominations.filter(nomination => nomination.highlighted).length === 2 ? 200 : 150}
+                              height={film.nominations.filter(nomination => nomination.highlighted).length === 2 ? 133 : 100}
+                              style={{ objectFit: 'contain' }}
+                            />
+                          </div>
+                        )}
+                        <p>
+                          <strong>{nomination.nomination}</strong> — {nomination.festival} ({nomination.location}, {nomination.year})
+                        </p>
+                      </div>
+                    ))}
+                </div>
+              )}
+              
+              {/* Regular Nominations */}
+              <div>
+                {film.nominations
+                  .filter(nomination => !nomination.highlighted)
+                  .map((nomination, index) => (
+                    <p key={`regular-${index}`}>
+                      <strong>{nomination.nomination}</strong> — {nomination.festival} ({nomination.location}, {nomination.year})
+                    </p>
+                  ))}
+              </div>
+            </div>
+          )}
+
           {/* Invitations */}
           {film.invitations && film.invitations.length > 0 && (
             <div className="film-modal-section">
               <h3>Invitations</h3>
+              
+              {/* Highlighted Invitations in a row */}
+              {film.invitations.some(invitation => 
+                typeof invitation === 'object' && invitation.highlighted
+              ) && (
+                <div className={`highlighted-items-container ${
+                  film.invitations.filter(invitation => 
+                    typeof invitation === 'object' && invitation.highlighted
+                  ).length === 2 ? 'two-items' : ''
+                }`}>
+                  {film.invitations
+                    .filter(invitation => 
+                      typeof invitation === 'object' && invitation.highlighted
+                    )
+                    .map((invitation, index) => {
+                      const inv = invitation as Invitation;
+                      const highlightedCount = film.invitations.filter(invitation => 
+                        typeof invitation === 'object' && invitation.highlighted
+                      ).length;
+                      return (
+                        <div key={`highlighted-${index}`} className="highlighted-item">
+                          {inv.image && (
+                            <div className="highlight-image">
+                              <Image
+                                src={inv.image}
+                                alt={`${inv.name} invitation`}
+                                width={highlightedCount === 2 ? 200 : 150}
+                                height={highlightedCount === 2 ? 133 : 100}
+                                style={{ objectFit: 'contain' }}
+                              />
+                            </div>
+                          )}
+                          <p>{inv.name}</p>
+                        </div>
+                      );
+                    })}
+                </div>
+              )}
+              
+              {/* Regular Invitations */}
               <div>
-                {film.invitations.map((invitation, index) => (
-                  <p key={index}>{invitation}</p>
-                ))}
+                {film.invitations
+                  .filter(invitation => 
+                    typeof invitation === 'string' || 
+                    (typeof invitation === 'object' && !invitation.highlighted)
+                  )
+                  .map((invitation, index) => {
+                    if (typeof invitation === 'string') {
+                      return <p key={`regular-string-${index}`}>{invitation}</p>
+                    } else {
+                      const inv = invitation as Invitation;
+                      return <p key={`regular-object-${index}`}>{inv.name}</p>
+                    }
+                  })}
               </div>
             </div>
           )}
@@ -331,10 +478,14 @@ const FilmModal = ({
                 <p><strong>Co-author:</strong> {film.coAuthor}</p>
               )}
               {film.producer && (
-                <p><strong>Producer:</strong> {film.producer}</p>
-              )}
-              {film.coProducers && film.coProducers.length > 0 && (
-                <p><strong>Co-producers:</strong> {film.coProducers.join(', ')}</p>
+                <p>
+                  <strong>
+                    {film.coProducers && film.coProducers.length > 0 ? 'Producers:' : 'Producer:'}
+                  </strong> {film.producer}
+                  {film.coProducers && film.coProducers.length > 0 && (
+                    <><br />Co-producers: {film.coProducers.join(', ')}</>
+                  )}
+                </p>
               )}
               {film.directorOfPhotography && (
                 <p><strong>Director of Photography:</strong> {film.directorOfPhotography}</p>
@@ -358,6 +509,17 @@ const FilmModal = ({
               <div>
                 {film.financedBy.map((financier, index) => (
                   <p key={index}>{financier}</p>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Funded By */}
+          {film.fundedBy && film.fundedBy.length > 0 && (
+            <div className="film-modal-section">
+              <div>
+                {film.fundedBy.map((funder, index) => (
+                  <p key={index}>{funder}</p>
                 ))}
               </div>
             </div>

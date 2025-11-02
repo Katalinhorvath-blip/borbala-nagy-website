@@ -24,6 +24,7 @@ CineLink Industry Days – Sarajevo Film Festival (Bosnia and Herzegovina, 2020)
 Cutting Edge Talent Camp – International Filmfestival Mannheim-Heidelberg (Germany, 2020)
 Jump In – Poitiers Film Festival (France, 2020)
 
+#### Funded by
 Script development funded by the National Film Institute of Hungary (NFI Inkubátor program for debut films) and BKM - the Federal Government Commissioner for Culture and Media of Germany.
 
 ---

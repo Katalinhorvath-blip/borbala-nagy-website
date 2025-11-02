@@ -1,28 +1,16 @@
 // Essential content for Borbála Nagy filmmaker portfolio website
 
-export const content = {
-  // Vision page content
-  vision: {
-    title: "Vision",
-    statement: `I'm captivated by human nature—people fascinate me. I believe that a person's true essence is revealed when faced with a moral dilemma. I delve into these pivotal moments, exploring self-confrontation through the societal mirror.
-
-Dialogue is my playground, where I explore the expressive power of language. My linguistics studies revealed the many facets of languages, which I now use to uncover my characters' inner lives. Language, as a reflection of our history, society, and psyche, is the perfect tool for this exploration.
-
-With patient camerawork, I offer the audience time to observe. My background as a stage dancer influenced my understanding of choreography in three dimensions. This experience shapes how I work with actors and the space around them today.`,
-    quote: "Cinema is the art of patient observation, where every gesture, every pause, every word reveals the complexity of human nature."
-  },
-
-  // Films data
-  films: [
-    {
-      id: "nothing-to-see-here",
-      title: "NOTHING TO SEE HERE",
-      subtitle: undefined,
-      type: "Fiction in development",
-      duration: undefined,
-      year: undefined,
-      language: undefined,
-      originalTitle: undefined,
+// Films data
+const staticFilmsData = [
+  {
+    id: "nothing-to-see-here",
+    title: "NOTHING TO SEE HERE",
+    subtitle: undefined,
+    type: "Fiction in development",
+    duration: undefined,
+    year: undefined,
+    language: undefined,
+    originalTitle: undefined,
       synopsis: "When a Hitler meme roasting the school's clueless management goes viral, a newly appointed principal finds herself at a crossroads: obey the orders from above and punish the student responsible, or follow her own moral compass—putting her job at risk. Based on real events.",
       images: [
         "/images/nothing-to-see-here/image1.png"
@@ -32,13 +20,17 @@ With patient camerawork, I offer the audience time to observe. My background as 
           festival: "BUDAPEST DEBUT FILM FORUM",
           award: "Most Promising Fiction Feature Project",
           year: "2022",
-          location: "Hungary"
+          location: "Hungary",
+          highlighted: true,
+          image: "/images/awards/BDFF_logo.png"
         },
         {
           festival: "WENDLAND FILM FESTIVAL",
           award: "Best Pitch",
           year: "2019",
-          location: "Germany"
+          location: "Germany",
+          highlighted: true,
+          image: "/images/awards/WS.png"
         }
       ],
       
@@ -54,13 +46,34 @@ With patient camerawork, I offer the audience time to observe. My background as 
       // Awards and recognition
       invitations: [
         "Brussels Co-Production Forum (Belgium, 2022)",
-        "Cannes Cinéfondation Residence (France, 2021-2022)",
-        "Berlin AiR Artist-in-Residence (Israel, 2021)",
-        "Pop Up Film Residency (Slovakia, 2021)",
+        {
+          name: "Cannes Cinéfondation Residence (France, 2021-2022)",
+          highlighted: true,
+          image: "/images/invitations/cinef_res.png"
+        },
+        {
+          name: "Berlin AiR Artist-in-Residence (Israel, 2021)",
+          highlighted: true,
+          image: "/images/invitations/berl.png"
+        },
+        {
+          name: "Pop Up Film Residency (Slovakia, 2021)",
+          highlighted: true,
+          image: "/images/invitations/POP-UP-logo-small.png"
+        },
+        {
+          name: "CineLink Industry Days – Sarajevo Film Festival (Bosnia and Herzegovina, 2020)",
+          highlighted: true,
+          image: "/images/invitations/OIP.webp"
+        },
         "Inkubátor – Debut Film Forum (Hungary, 2021)",
-        "CineLink Industry Days – Sarajevo Film Festival (Bosnia and Herzegovina, 2020)",
         "Cutting Edge Talent Camp – International Filmfestival Mannheim-Heidelberg (Germany, 2020)",
         "Jump In – Poitiers Film Festival (France, 2020)"
+      ],
+
+      // Funding information
+      fundedBy: [
+        "Script development funded by the National Film Institute of Hungary (NFI Inkubátor program for debut films) and BKM - the Federal Government Commissioner for Culture and Media of Germany."
       ]
     },
     {
@@ -225,8 +238,7 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "/images/everything-alright/image2.png",
         "/images/everything-alright/image3.png",
         "/images/everything-alright/image4.png",
-        "/images/everything-alright/image5.png",
-        "/images/everything-alright/image6.png"
+        "/images/everything-alright/image5.png"
       ],
       
       // Trailer
@@ -253,19 +265,23 @@ With patient camerawork, I offer the audience time to observe. My background as 
         "Goethe Institut (Germany)"
       ],
       
-      // Awards and recognition
-      awards: [
+      // Nominations
+      nominations: [
         {
           festival: "GERMAN SHORT FILM AWARD",
-          award: "Nominee",
+          nomination: "German Short Film Award Nominee",
           year: "2018",
-          location: "Germany"
+          location: "Germany",
+          highlighted: true,
+          image: "/images/awards/dkfp-logo.svg"
         },
         {
           festival: "BERLINALE",
-          award: "German Film Critics Prize Nominee",
+          nomination: "German Film Critics Prize Nominee",
           year: "2019",
-          location: "Germany"
+          location: "Germany",
+          highlighted: true,
+          image: "/images/awards/VDFK.png"
         }
       ],
       
@@ -575,7 +591,17 @@ With patient camerawork, I offer the audience time to observe. My background as 
       // Festival selections
       festivals: []
     }
-  ]
-}
+];
 
-export default content
+// Export films and vision content
+export const films = staticFilmsData;
+
+export const vision = {
+  title: "Vision",
+  statement: `I'm captivated by human nature—people fascinate me. I believe that a person's true essence is revealed when faced with a moral dilemma. I delve into these pivotal moments, exploring self-confrontation through the societal mirror.
+
+Dialogue is my playground, where I explore the expressive power of language. My linguistics studies revealed the many facets of languages, which I now use to uncover my characters' inner lives. Language, as a reflection of our history, society, and psyche, is the perfect tool for this exploration.
+
+With patient camerawork, I offer the audience time to observe. My background as a stage dancer influenced my understanding of choreography in three dimensions. This experience shapes how I work with actors and the space around them today.`,
+  quote: "Cinema is the art of patient observation, where every gesture, every pause, every word reveals the complexity of human nature."
+};
