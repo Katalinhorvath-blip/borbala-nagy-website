@@ -33,7 +33,6 @@ interface Invitation {
 interface FilmData {
   id: string
   title: string
-  subtitle?: string
   type: string
   duration?: string
   year?: string
@@ -176,9 +175,6 @@ const FilmModal = ({
           {/* Film Header */}
           <div className="film-modal-header">
             <h1 className="film-modal-title">{film.title || 'Untitled'}</h1>
-            {film.subtitle && (
-              <p className="film-modal-subtitle">{film.subtitle}</p>
-            )}
             <div className="film-modal-meta">
               <span>{film.type || 'Film'}</span>
               {film.duration && <><span> | </span><span>{film.duration}</span></>}

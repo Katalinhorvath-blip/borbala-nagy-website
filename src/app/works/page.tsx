@@ -47,7 +47,6 @@ export default function Works() {
                   <div className="film-category">{film.type.toUpperCase()}</div>
                   <div>
                     <h3 className="film-title">{film.title}</h3>
-                    {film.subtitle && <p className="film-subtitle">{film.subtitle}</p>}
                     <p className="film-details">
                       {film.duration && film.year ? `${film.duration}, ${film.year}` : 
                        film.duration ? film.duration :
