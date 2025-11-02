@@ -12,11 +12,11 @@ export default function Vision() {
             <div className="text-container">
               <div className="bio-text">
                 <span className="vision-quote">
-                  &ldquo;I believe that stories shaped by the female gaze create space for more honest and complex portrayals of human experience—fostering empathy and expanding our understanding of the world.&rdquo;
+                  &ldquo;I believe that stories shaped by the female gaze create space for more honest and complex portrayals of human experience&mdash;fostering empathy and expanding our understanding of the world.&rdquo;
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
-                  In her work, Borbála Nagy examines the social structures that shape our lives, questioning power and inequality. She aims to provoke dialogue, reshape collective narratives, and contribute to a more equitable world. For her, cinema is more than storytelling–it's a catalyst for reflection and change.
+                  In her work, Borbála Nagy examines the social structures that shape our lives, questioning power and inequality. She aims to provoke dialogue, reshape collective narratives, and contribute to a more equitable world. For her, cinema is more than storytelling&ndash;it&apos;s a catalyst for reflection and change.
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
