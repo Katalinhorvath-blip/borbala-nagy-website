@@ -136,13 +136,17 @@ const staticFilmsData = [
           festival: "CONNECTING COTTBUS",
           award: "CANNES PRODUCERS NETWORK AWARD",
           year: "2022",
-          location: "Germany"
+          location: "Germany",
+          highlighted: true,
+          image: "/images/awards/cannes_pnaward.png"
         },
         {
           festival: "BUDAPEST DEBUT FILM FORUM",
           award: "MOST PROMISING FICTION FEATURE PROJECT",
           year: "2022",
-          location: "Hungary"
+          location: "Hungary",
+          highlighted: true,
+          image: "/images/awards/BDFF_logo.png"
         }
       ],
       
