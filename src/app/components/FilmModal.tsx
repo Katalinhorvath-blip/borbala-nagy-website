@@ -68,6 +68,9 @@ interface FilmData {
   festivals?: string[]
   invitations?: (string | Invitation)[]
   
+  // Producer logos
+  producerLogos?: string[]
+  
   // Additional notes
   basedOn?: string
   
@@ -525,6 +528,27 @@ const FilmModal = ({
             <div className="film-modal-section">
               <h3>Festivals</h3>
               <p>{film.festivals.join(', ')}</p>
+            </div>
+          )}
+
+          {/* Producer Logos */}
+          {film.producerLogos && film.producerLogos.length > 0 && (
+            <div className="film-modal-section">
+              <div className="highlighted-items-container">
+                {film.producerLogos.map((logo, index) => (
+                  <div key={`producer-logo-${index}`} className="highlighted-item">
+                    <div className="highlight-image">
+                      <Image
+                        src={logo}
+                        alt={`Producer logo ${index + 1}`}
+                        width={150}
+                        height={100}
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 

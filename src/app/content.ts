@@ -155,6 +155,15 @@ const staticFilmsData = [
         "Full Circle Lab / Nouvelle Aquitaine – script development (France, 2022)",
         "First Cut Lab – work in progress editing consultation (online, 2024)",
         "First Cut+ – work in progress presentation at Karlovy Vary International Film Festival (Czechia, 2024)"
+      ],
+      
+      // Producer logos
+      producerLogos: [
+        "/images/producers/lupa_tipo_logo_fekete copy.png",
+        "/images/producers/VF_Logo_04-2022_015.png",
+        "/images/producers/sister_logo_black.png",
+        "/images/producers/dffb-logo.png",
+        "/images/producers/nfi.png"
       ]
     },
     {
