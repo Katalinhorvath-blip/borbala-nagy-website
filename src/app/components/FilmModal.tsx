@@ -181,7 +181,7 @@ const FilmModal = ({
               {film.duration && <><span> | </span><span>{film.duration}</span></>}
               {film.year && <><span> | </span><span>{film.year}</span></>}
               <br />
-              <span>Language: {film.language || 'TBD'}</span>
+              {film.language && <span>Language: {film.language}</span>}
               {film.originalTitle && (
                 <>
                   <br />
@@ -299,7 +299,12 @@ const FilmModal = ({
                           </div>
                         )}
                         <p>
-                          <strong>{award.award}</strong> — {award.festival} ({award.location}, {award.year})
+                          <strong>{award.award}</strong> — {award.festival}
+                          {(award.location || award.year) && (
+                            <span>
+                              {' '}({[award.location, award.year].filter(Boolean).join(', ')})
+                            </span>
+                          )}
                         </p>
                       </div>
                     ))}
@@ -312,7 +317,12 @@ const FilmModal = ({
                   .filter(award => !award.highlighted)
                   .map((award, index) => (
                     <p key={`regular-${index}`}>
-                      <strong>{award.award}</strong> — {award.festival} ({award.location}, {award.year})
+                      <strong>{award.award}</strong> — {award.festival}
+                      {(award.location || award.year) && (
+                        <span>
+                          {' '}({[award.location, award.year].filter(Boolean).join(', ')})
+                        </span>
+                      )}
                     </p>
                   ))}
               </div>
@@ -353,7 +363,12 @@ const FilmModal = ({
                           </div>
                         )}
                         <p>
-                          <strong>{nomination.nomination}</strong> — {nomination.festival} ({nomination.location}, {nomination.year})
+                          <strong>{nomination.nomination}</strong> — {nomination.festival}
+                          {(nomination.location || nomination.year) && (
+                            <span>
+                              {' '}({[nomination.location, nomination.year].filter(Boolean).join(', ')})
+                            </span>
+                          )}
                         </p>
                       </div>
                     ))}
@@ -366,7 +381,12 @@ const FilmModal = ({
                   .filter(nomination => !nomination.highlighted)
                   .map((nomination, index) => (
                     <p key={`regular-${index}`}>
-                      <strong>{nomination.nomination}</strong> — {nomination.festival} ({nomination.location}, {nomination.year})
+                      <strong>{nomination.nomination}</strong> — {nomination.festival}
+                      {(nomination.location || nomination.year) && (
+                        <span>
+                          {' '}({[nomination.location, nomination.year].filter(Boolean).join(', ')})
+                        </span>
+                      )}
                     </p>
                   ))}
               </div>

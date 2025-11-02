@@ -5,12 +5,7 @@ const staticFilmsData = [
   {
     id: "nothing-to-see-here",
     title: "NOTHING TO SEE HERE",
-    subtitle: undefined,
     type: "Fiction in development",
-    duration: undefined,
-    year: undefined,
-    language: undefined,
-    originalTitle: undefined,
       synopsis: "When a Hitler meme roasting the school's clueless management goes viral, a newly appointed principal finds herself at a crossroads: obey the orders from above and punish the student responsible, or follow her own moral compass—putting her job at risk. Based on real events.",
       images: [
         "/images/nothing-to-see-here/image1.png"
@@ -84,7 +79,6 @@ const staticFilmsData = [
       duration: "92'",
       year: "In post-production",
       language: "Hungarian, English, German, French",
-      originalTitle: undefined,
       synopsis: "Somewhere in Europe, three Hungarian women are having a difficult day. While navigating life-changing decisions beyond the so-called norm, they are confronted with the issues of late motherhood. On their path toward self-determination, one question echoes: How free are they, really, to live the lives they desire?",
       images: [
         "/images/mambo-maternica/image1.png", 
@@ -728,16 +722,11 @@ export const films = staticFilmsData;
 
 export const vision = {
   title: "Vision",
-  quote: "I believe that stories shaped by the female gaze create space for more honest and complex portrayals of human experience—fostering empathy and expanding our understanding of the world.",
-  paragraphs: [
-    "In her work, Borbála Nagy examines the social structures that shape our lives, questioning power and inequality. She aims to provoke dialogue, reshape collective narratives, and contribute to a more equitable world. For her, cinema is more than storytelling–it's a catalyst for reflection and change.",
-    "Both in her films and on set, she advocates for an open, conscious, and inclusive society. Questions of loneliness, identity, and self-ownership frequently emerge in her movies, alongside themes of gender, migration, the impact of oppression, and the possibilities of resistance.",
-    "Fascinated by human nature, she explores how true character emerges when faced with a moral dilemma. These pivotal moments of self-confrontation, seen against the societal mirror, reveal the essence of the individual.",
-    "Despite the weight of her subjects, she finds humor in everyday absurdities, looking at the world through a lens of irony."
-  ],
-  image: {
-    src: "/images/vision/VISION IMAGE.jpg",
-    alt: "Borbála Nagy",
-    credit: "Photo: Sára Salamon"
-  }
+  statement: `“I believe that stories told through the female gaze create space for more honest and complex portrayals of human experience—fostering empathy and expanding our understanding of the world.” 
+In her work, Borbála Nagy examines the social structures that influence our lives, questioning power and inequality. She aims to provoke dialogue, reshape collective narratives, and contribute to a more equitable world. For her, cinema is more than storytelling–it’s a catalyst for reflection and change. 
+Both in her films and on set, she advocates for an open, conscious, and inclusive society. Questions of loneliness, identity, and self-ownership frequently emerge in her movies, alongside themes of gender, migration, the impact of oppression, and the possibilities of resistance. 
+Fascinated by human nature, she explores how true character emerges when faced with a moral dilemma. These pivotal moments of self-confrontation, seen against the societal mirror, reveal the essence of the individual. 
+Despite the weight of her subjects, she finds humor in everyday absurdities, looking at life through a lens of irony.
+`,
+  quote: ""
 };
