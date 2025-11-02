@@ -534,7 +534,7 @@ const FilmModal = ({
           {/* Producer Logos */}
           {film.producerLogos && film.producerLogos.length > 0 && (
             <div className="film-modal-section">
-              <div className="highlighted-items-container">
+              <div className="producer-logos-container">
                 {film.producerLogos.map((logo, index) => (
                   <div key={`producer-logo-${index}`} className="highlighted-item">
                     <div className="highlight-image">
