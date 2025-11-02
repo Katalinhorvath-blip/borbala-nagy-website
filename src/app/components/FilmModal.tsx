@@ -69,7 +69,9 @@ interface FilmData {
   invitations?: (string | Invitation)[]
   
   // Producer logos
-  producerLogos?: string[]
+  producerLogos?: string[] // deprecated - use productionLogos and financingLogos
+  productionLogos?: string[]
+  financingLogos?: string[]
   
   // Additional notes
   basedOn?: string
@@ -498,6 +500,25 @@ const FilmModal = ({
                 <p><strong>Original Score:</strong> {film.originalScore}</p>
               )}
             </div>
+            
+            {/* Production Logos */}
+            {film.productionLogos && film.productionLogos.length > 0 && (
+              <div className="highlighted-items-container">
+                {film.productionLogos.map((logo, index) => (
+                  <div key={`production-logo-${index}`} className="highlighted-item">
+                    <div className="highlight-image">
+                      <Image
+                        src={logo}
+                        alt={`Production company logo ${index + 1}`}
+                        width={150}
+                        height={100}
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Financed By */}
@@ -509,6 +530,25 @@ const FilmModal = ({
                   <p key={index}>{financier}</p>
                 ))}
               </div>
+              
+              {/* Financing Logos */}
+              {film.financingLogos && film.financingLogos.length > 0 && (
+                <div className="highlighted-items-container">
+                  {film.financingLogos.map((logo, index) => (
+                    <div key={`financing-logo-${index}`} className="highlighted-item">
+                      <div className="highlight-image">
+                        <Image
+                          src={logo}
+                          alt={`Financing organization logo ${index + 1}`}
+                          width={150}
+                          height={100}
+                          style={{ objectFit: 'contain' }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 
@@ -528,27 +568,6 @@ const FilmModal = ({
             <div className="film-modal-section">
               <h3>Festivals</h3>
               <p>{film.festivals.join(', ')}</p>
-            </div>
-          )}
-
-          {/* Producer Logos */}
-          {film.producerLogos && film.producerLogos.length > 0 && (
-            <div className="film-modal-section">
-              <div className="producer-logos-container">
-                {film.producerLogos.map((logo, index) => (
-                  <div key={`producer-logo-${index}`} className="highlighted-item">
-                    <div className="highlight-image">
-                      <Image
-                        src={logo}
-                        alt={`Producer logo ${index + 1}`}
-                        width={150}
-                        height={100}
-                        style={{ objectFit: 'contain' }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           )}
 
