@@ -43,7 +43,6 @@ const staticFilmsData = [
         "Brussels Co-Production Forum (Belgium, 2022)",
         {
           name: "Cannes Cinéfondation Residence",
-          festival: "Cannes Film Festival",
           location: "France",
           year: "2021-2022",
           highlighted: true,
@@ -51,7 +50,6 @@ const staticFilmsData = [
         },
         {
           name: "Berlin AiR Artist-in-Residence",
-          festival: "Berlin AiR",
           location: "Israel", 
           year: "2021",
           highlighted: true,
@@ -59,7 +57,6 @@ const staticFilmsData = [
         },
         {
           name: "Pop Up Film Residency",
-          festival: "Pop Up Film",
           location: "Slovakia",
           year: "2021",
           highlighted: true,
@@ -86,7 +83,6 @@ const staticFilmsData = [
     {
       id: "mambo-maternica",
       title: "MAMBO MATERNICA",
-      subtitle: "In post-production",
       type: "Fiction",
       duration: "92'",
       year: "In post-production",
@@ -98,8 +94,7 @@ const staticFilmsData = [
         "/images/mambo-maternica/image3.png",
         "/images/mambo-maternica/image4.png",
         "/images/mambo-maternica/image5.png",
-        "/images/mambo-maternica/image6.png",
-        "/images/mambo-maternica/image7.png"
+        "/images/mambo-maternica/image6.png"
       ],
       
       // Core production info
@@ -146,7 +141,9 @@ const staticFilmsData = [
       // Financing logos
       financingLogos: [
         "/images/producers/dffb-logo.png",
-        "/images/producers/nfi.png"
+        "/images/producers/nfi.png",
+        "/images/producers/alca.png",
+        "/images/producers/BKM.png"
       ],
       
       // Awards and recognition
@@ -179,7 +176,6 @@ const staticFilmsData = [
     {
       id: "land-of-glory",
       title: "LAND OF GLORY",
-      subtitle: "(Pannónia dicsérete)",
       type: "Fiction",
       duration: "27'",
       year: "2020",
@@ -362,7 +358,6 @@ const staticFilmsData = [
     {
       id: "everything-alright",
       title: "EVERYTHING ALRIGHT",
-      subtitle: "(Minden rendben)",
       type: "Fiction",
       duration: "13'",
       year: "2019",
@@ -444,7 +439,6 @@ const staticFilmsData = [
     {
       id: "asphalt-flowers",
       title: "ASPHALT FLOWERS",
-      subtitle: "(Asphaltblumen)",
       type: "Fiction",
       duration: "18'",
       year: "2018",
@@ -499,7 +493,6 @@ const staticFilmsData = [
     {
       id: "cross-country-drive",
       title: "CROSS-COUNTRY DRIVE",
-      subtitle: "(Auf Überlandfahrt)",
       type: "Fiction",
       duration: "20'",
       year: "2016",
@@ -560,7 +553,6 @@ const staticFilmsData = [
     {
       id: "somewhere-else",
       title: "SOMEWHERE ELSE",
-      subtitle: "(Irgendwo Anders)",
       type: "Fiction",
       duration: "20'",
       year: "2015",
@@ -629,7 +621,6 @@ const staticFilmsData = [
     {
       id: "about-me-and-you",
       title: "ABOUT ME AND YOU",
-      subtitle: "(von mir und dir)",
       type: "Fiction",
       duration: "14'",
       year: "2015",
@@ -682,7 +673,6 @@ const staticFilmsData = [
     {
       id: "hannah",
       title: "HANNAH",
-      subtitle: undefined,
       type: "Fiction",
       duration: "7'",
       year: "2013",

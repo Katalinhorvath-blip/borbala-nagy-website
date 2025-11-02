@@ -497,7 +497,7 @@ const FilmModal = ({
             )}
             
             <div className="film-modal-section">
-              <h3>Crew</h3>
+              <h3>Production team</h3>
               {film.writtenAndDirectedBy && (
                 <p><strong>Written & directed by:</strong> {film.writtenAndDirectedBy}</p>
               )}
@@ -515,10 +515,10 @@ const FilmModal = ({
                   <strong>
                     {film.coProducers && film.coProducers.length > 0 ? 'Producers:' : 'Producer:'}
                   </strong> {film.producer}
-                  {film.coProducers && film.coProducers.length > 0 && (
-                    <><br />Co-producers: {film.coProducers.join(', ')}</>
-                  )}
                 </p>
+              )}
+              {film.coProducers && film.coProducers.length > 0 && (
+                <p><strong>Co-producers:</strong> {film.coProducers.join(', ')}</p>
               )}
               {film.directorOfPhotography && (
                 <p><strong>Director of Photography:</strong> {film.directorOfPhotography}</p>
@@ -563,25 +563,6 @@ const FilmModal = ({
                   <p key={index}>{financier}</p>
                 ))}
               </div>
-              
-              {/* Financing Logos */}
-              {film.financingLogos && film.financingLogos.length > 0 && (
-                <div className="highlighted-items-container">
-                  {film.financingLogos.map((logo, index) => (
-                    <div key={`financing-logo-${index}`} className="highlighted-item">
-                      <div className="highlight-image">
-                        <Image
-                          src={logo}
-                          alt={`Financing organization logo ${index + 1}`}
-                          width={150}
-                          height={100}
-                          style={{ objectFit: 'contain' }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
           )}
 
@@ -601,6 +582,26 @@ const FilmModal = ({
             <div className="film-modal-section">
               <h3>Festivals</h3>
               <p>{film.festivals.join(', ')}</p>
+            </div>
+          )}
+
+          {/* Financing Logos at Bottom */}
+          {film.financingLogos && film.financingLogos.length > 0 && (
+            <div className="financing-logos-bottom">
+              {film.financingLogos.map((logo, index) => {
+                const isNFI = logo.includes('nfi.png');
+                return (
+                  <div key={`financing-logo-${index}`} className="financing-logo-item">
+                    <Image
+                      src={logo}
+                      alt={`Financing organization logo ${index + 1}`}
+                      width={isNFI ? 60 : 80}
+                      height={isNFI ? 40 : 53}
+                      style={{ objectFit: 'contain' }}
+                    />
+                  </div>
+                );
+              })}
             </div>
           )}
 
