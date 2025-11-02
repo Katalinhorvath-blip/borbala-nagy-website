@@ -368,10 +368,10 @@ const staticFilmsData = [
       originalTitle: "Minden rendben",
       synopsis: "On his first day patrolling the border between Hungary and Serbia, Alpár is tasked with protecting his country from refugees. As he faces the harsh realities of life among the border guards, he soon realizes that surviving in this environment means abandoning his humanity.",
       images: [
-        "/images/everything-alright/image1.png?v=2025",
-        "/images/everything-alright/image2.png?v=2025",
-        "/images/everything-alright/image3.png?v=2025",
-        "/images/everything-alright/image4.png?v=2025"
+        "/images/everything-alright/image2.png",
+        "/images/everything-alright/image3.png",
+        "/images/everything-alright/image4.png",
+        "/images/everything-alright/image1.png"
       ],
       
       // Trailer
