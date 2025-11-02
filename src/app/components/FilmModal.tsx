@@ -27,11 +27,6 @@ interface Invitation {
   image?: string
 }
 
-interface CrewMember {
-  role: string
-  name: string
-}
-
 interface FilmData {
   id: string
   title: string
@@ -281,7 +276,7 @@ const FilmModal = ({
               {/* Highlighted Awards in a row */}
               {film.awards.some(award => award.highlighted) && (
                 <div className={`highlighted-items-container ${
-                  film.awards.filter(award => award.highlighted).length === 2 ? 'two-items' : ''
+                  (film.awards?.filter(award => award.highlighted).length === 2) ? 'two-items' : ''
                 }`}>
                   {film.awards
                     .filter(award => award.highlighted)
@@ -292,8 +287,8 @@ const FilmModal = ({
                             <Image
                               src={award.image}
                               alt={`${award.award} - ${award.festival}`}
-                              width={film.awards.filter(award => award.highlighted).length === 2 ? 200 : 150}
-                              height={film.awards.filter(award => award.highlighted).length === 2 ? 133 : 100}
+                              width={(film.awards?.filter(award => award.highlighted).length === 2) ? 200 : 150}
+                              height={(film.awards?.filter(award => award.highlighted).length === 2) ? 133 : 100}
                               style={{ objectFit: 'contain' }}
                             />
                           </div>
@@ -335,7 +330,7 @@ const FilmModal = ({
               {/* Highlighted Nominations in a row */}
               {film.nominations.some(nomination => nomination.highlighted) && (
                 <div className={`highlighted-items-container ${
-                  film.nominations.filter(nomination => nomination.highlighted).length === 2 ? 'two-items' : ''
+                  (film.nominations?.filter(nomination => nomination.highlighted).length === 2) ? 'two-items' : ''
                 }`}>
                   {film.nominations
                     .filter(nomination => nomination.highlighted)
@@ -346,8 +341,8 @@ const FilmModal = ({
                             <Image
                               src={nomination.image}
                               alt={`${nomination.nomination} - ${nomination.festival}`}
-                              width={film.nominations.filter(nomination => nomination.highlighted).length === 2 ? 200 : 150}
-                              height={film.nominations.filter(nomination => nomination.highlighted).length === 2 ? 133 : 100}
+                              width={(film.nominations?.filter(nomination => nomination.highlighted).length === 2) ? 200 : 150}
+                              height={(film.nominations?.filter(nomination => nomination.highlighted).length === 2) ? 133 : 100}
                               style={{ objectFit: 'contain' }}
                             />
                           </div>
@@ -393,9 +388,9 @@ const FilmModal = ({
                     )
                     .map((invitation, index) => {
                       const inv = invitation as Invitation;
-                      const highlightedCount = film.invitations.filter(invitation => 
+                      const highlightedCount = film.invitations?.filter(invitation => 
                         typeof invitation === 'object' && invitation.highlighted
-                      ).length;
+                      ).length || 0;
                       return (
                         <div key={`highlighted-${index}`} className="highlighted-item">
                           {inv.image && (
