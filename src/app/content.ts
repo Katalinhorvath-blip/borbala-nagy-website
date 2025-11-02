@@ -728,14 +728,16 @@ export const films = staticFilmsData;
 
 export const vision = {
   title: "Vision",
-  statement: `I believe that stories shaped by the female gaze create space for more honest and complex portrayals of human experience—fostering empathy and expanding our understanding of the world.
-
-In her work, Borbála Nagy examines the social structures that shape our lives, questioning power and inequality. She aims to provoke dialogue, reshape collective narratives, and contribute to a more equitable world. For her, cinema is more than storytelling–it's a catalyst for reflection and change.
-
-Both in her films and on set, she advocates for an open, conscious, and inclusive society. Questions of loneliness, identity, and self-ownership frequently emerge in her movies, alongside themes of gender, migration, the impact of oppression, and the possibilities of resistance.
-
-Fascinated by human nature, she explores how true character emerges when faced with a moral dilemma. These pivotal moments of self-confrontation, seen against the societal mirror, reveal the essence of the individual.
-
-Despite the weight of her subjects, she finds humor in everyday absurdities, looking at the world through a lens of irony.`,
-  quote: ""
+  quote: "I believe that stories shaped by the female gaze create space for more honest and complex portrayals of human experience—fostering empathy and expanding our understanding of the world.",
+  paragraphs: [
+    "In her work, Borbála Nagy examines the social structures that shape our lives, questioning power and inequality. She aims to provoke dialogue, reshape collective narratives, and contribute to a more equitable world. For her, cinema is more than storytelling–it's a catalyst for reflection and change.",
+    "Both in her films and on set, she advocates for an open, conscious, and inclusive society. Questions of loneliness, identity, and self-ownership frequently emerge in her movies, alongside themes of gender, migration, the impact of oppression, and the possibilities of resistance.",
+    "Fascinated by human nature, she explores how true character emerges when faced with a moral dilemma. These pivotal moments of self-confrontation, seen against the societal mirror, reveal the essence of the individual.",
+    "Despite the weight of her subjects, she finds humor in everyday absurdities, looking at the world through a lens of irony."
+  ],
+  image: {
+    src: "/images/vision/VISION IMAGE.jpg",
+    alt: "Borbála Nagy",
+    credit: "Photo: Sára Salamon"
+  }
 };
