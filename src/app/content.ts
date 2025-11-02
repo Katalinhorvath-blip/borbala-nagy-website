@@ -615,10 +615,14 @@ export const films = staticFilmsData;
 
 export const vision = {
   title: "Vision",
-  statement: `I'm captivated by human nature—people fascinate me. I believe that a person's true essence is revealed when faced with a moral dilemma. I delve into these pivotal moments, exploring self-confrontation through the societal mirror.
+  statement: `I believe that stories shaped by the female gaze create space for more honest and complex portrayals of human experience—fostering empathy and expanding our understanding of the world.
 
-Dialogue is my playground, where I explore the expressive power of language. My linguistics studies revealed the many facets of languages, which I now use to uncover my characters' inner lives. Language, as a reflection of our history, society, and psyche, is the perfect tool for this exploration.
+In her work, Borbála Nagy examines the social structures that shape our lives, questioning power and inequality. She aims to provoke dialogue, reshape collective narratives, and contribute to a more equitable world. For her, cinema is more than storytelling–it's a catalyst for reflection and change.
 
-With patient camerawork, I offer the audience time to observe. My background as a stage dancer influenced my understanding of choreography in three dimensions. This experience shapes how I work with actors and the space around them today.`,
-  quote: "Cinema is the art of patient observation, where every gesture, every pause, every word reveals the complexity of human nature."
+Both in her films and on set, she advocates for an open, conscious, and inclusive society. Questions of loneliness, identity, and self-ownership frequently emerge in her movies, alongside themes of gender, migration, the impact of oppression, and the possibilities of resistance.
+
+Fascinated by human nature, she explores how true character emerges when faced with a moral dilemma. These pivotal moments of self-confrontation, seen against the societal mirror, reveal the essence of the individual.
+
+Despite the weight of her subjects, she finds humor in everyday absurdities, looking at the world through a lens of irony.`,
+  quote: ""
 };
