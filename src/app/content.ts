@@ -451,8 +451,7 @@ const staticFilmsData = [
         "/images/asphalt-flowers/image1.png",
         "/images/asphalt-flowers/image2.png",
         "/images/asphalt-flowers/image3.png",
-        "/images/asphalt-flowers/image4.png",
-        "/images/asphalt-flowers/image5.png"
+        "/images/asphalt-flowers/image4.png"
       ],
       
       // Core production info
@@ -507,8 +506,7 @@ const staticFilmsData = [
         "/images/cross-country-drive/image1.png",
         "/images/cross-country-drive/image2.png",
         "/images/cross-country-drive/image3.png",
-        "/images/cross-country-drive/image4.png",
-        "/images/cross-country-drive/image5.png"
+        "/images/cross-country-drive/image4.png"
       ],
       
       // Trailer
@@ -558,7 +556,7 @@ const staticFilmsData = [
       id: "somewhere-else",
       title: "SOMEWHERE ELSE",
       type: "Fiction",
-      duration: "20'",
+      duration: "15'",
       year: "2015",
       language: "German",
       originalTitle: "Irgendwo Anders",
