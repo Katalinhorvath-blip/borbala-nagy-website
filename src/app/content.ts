@@ -202,7 +202,9 @@ const staticFilmsData = [
         "Hanna Angelus", 
         "Nóra Rainer-Micsinyei", 
         "Péter Janklovics", 
-        "Zsuzsa Faragó"
+        "Zsuzsa Faragó",
+        "Luca Nyáry",
+        "Eszter Tompa"
       ],
       
       // Crew
@@ -225,7 +227,7 @@ const staticFilmsData = [
           year: "",
           location: "",
           highlighted: true,
-          image: "/images/awards/German_sho...il_award.png"
+          image: "/images/awards/German_short_fil_award.png"
         },
         {
           festival: "Hungarian Film Critics' Prize",
@@ -292,6 +294,14 @@ const staticFilmsData = [
           image: "/images/awards/fest_munich.png"
         },
         {
+          festival: "MALTER",
+          award: "2nd prize of the jury",
+          year: "",
+          location: "Debrecen, Hungary",
+          highlighted: true,
+          image: "/images/awards/Malter.jpg"
+        },
+        {
           festival: "Etiuda & Anima",
           award: "Honourable mention",
           year: "",
@@ -314,14 +324,6 @@ const staticFilmsData = [
           location: "Budapest, Hungary",
           highlighted: true,
           image: "/images/awards/busho.jpg"
-        },
-        {
-          festival: "MALTER",
-          award: "2nd prize of the jury",
-          year: "",
-          location: "Debrecen, Hungary",
-          highlighted: true,
-          image: "/images/awards/Maltar.jpg"
         },
         {
           festival: "Stuttgarter Filmwinter",
