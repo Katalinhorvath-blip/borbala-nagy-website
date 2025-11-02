@@ -464,6 +464,14 @@ const FilmModal = ({
             </div>
           )}
 
+          {/* Festivals */}
+          {film.festivals && film.festivals.length > 0 && (
+            <div className="film-modal-section">
+              <h3>Festivals</h3>
+              <p>{film.festivals.join(', ')}</p>
+            </div>
+          )}
+
           {/* Trailer */}
           {film.trailer && (
             <div className="film-modal-trailer">
@@ -493,7 +501,7 @@ const FilmModal = ({
             )}
             
             <div className="film-modal-section">
-              <h3>Production team</h3>
+              <h3>Crew</h3>
               {film.writtenAndDirectedBy && (
                 <p><strong>Written & directed by:</strong> {film.writtenAndDirectedBy}</p>
               )}
@@ -570,14 +578,6 @@ const FilmModal = ({
                   <p key={index}>{funder}</p>
                 ))}
               </div>
-            </div>
-          )}
-
-          {/* Festivals */}
-          {film.festivals && film.festivals.length > 0 && (
-            <div className="film-modal-section">
-              <h3>Festivals</h3>
-              <p>{film.festivals.join(', ')}</p>
             </div>
           )}
 

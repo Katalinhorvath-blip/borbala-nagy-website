@@ -93,8 +93,7 @@ const staticFilmsData = [
         "/images/mambo-maternica/image2.png", 
         "/images/mambo-maternica/image3.png",
         "/images/mambo-maternica/image4.png",
-        "/images/mambo-maternica/image5.png",
-        "/images/mambo-maternica/image6.png"
+        "/images/mambo-maternica/image5.png"
       ],
       
       // Core production info
@@ -150,7 +149,7 @@ const staticFilmsData = [
       awards: [
         {
           festival: "CONNECTING COTTBUS",
-          award: "CANNES PRODUCERS NETWORK AWARD",
+          award: "Cannes Producers Network Award",
           year: "2022",
           location: "Germany",
           highlighted: true,
@@ -158,7 +157,7 @@ const staticFilmsData = [
         },
         {
           festival: "BUDAPEST DEBUT FILM FORUM",
-          award: "MOST PROMISING FICTION FEATURE PROJECT",
+          award: "Most Promising Fiction Feature Project",
           year: "2022",
           location: "Hungary",
           highlighted: true,
