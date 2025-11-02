@@ -217,7 +217,120 @@ const staticFilmsData = [
       ],
       
       // Awards and recognition
-      awards: [],
+      awards: [
+        {
+          festival: "GERMAN SHORT FILM AWARD",
+          award: "Best short fiction",
+          year: "",
+          location: "",
+          highlighted: true,
+          image: "/images/awards/German_sho...il_award.png"
+        },
+        {
+          festival: "Hungarian Film Critics' Prize",
+          award: "Best short film",
+          year: "",
+          location: "",
+          highlighted: true,
+          image: "/images/awards/Hungarian_film_critics.jpg"
+        },
+        {
+          festival: "KURZFILMFESTIVAL KÖLN",
+          award: "3rd prize of the jury",
+          year: "",
+          location: "Köln, Germany",
+          highlighted: true,
+          image: "/images/awards/KFFK.png"
+        },
+        {
+          festival: "KURZFILMFESTIVAL KÖLN",
+          award: "Audience award",
+          year: "",
+          location: "Köln, Germany",
+          highlighted: true,
+          image: "/images/awards/KFFK2.png"
+        },
+        {
+          festival: "ACHTUNG BERLIN",
+          award: "Best medium-length film 2020",
+          year: "",
+          location: "Berlin, Germany",
+          highlighted: true,
+          image: "/images/awards/achtung.png"
+        },
+        {
+          festival: "FRISS HÚS",
+          award: "Best Live-Action Short",
+          year: "",
+          location: "Budapest, Hungary",
+          highlighted: true,
+          image: "/images/awards/Frisshus.png"
+        },
+        {
+          festival: "Drama ISFF",
+          award: "Special prize for the best production",
+          year: "",
+          location: "Drama, Greece",
+          highlighted: true,
+          image: "/images/awards/DISFF.png"
+        },
+        {
+          festival: "Alter-Native",
+          award: "Grand award for the best short film",
+          year: "",
+          location: "Targu Mures, Romania",
+          highlighted: true,
+          image: "/images/awards/alter_native.jpg"
+        },
+        {
+          festival: "FILMSCHOOLFEST",
+          award: "Best production",
+          year: "",
+          location: "Munich, Germany",
+          highlighted: true,
+          image: "/images/awards/fest_munich.png"
+        },
+        {
+          festival: "Etiuda & Anima",
+          award: "Honourable mention",
+          year: "",
+          location: "Krakow, Poland",
+          highlighted: true,
+          image: "/images/awards/Etiuda.png"
+        },
+        {
+          festival: "Festival L'Europe autour de l'Europe",
+          award: "Special mention",
+          year: "",
+          location: "Paris, France",
+          highlighted: true,
+          image: "/images/awards/Prix_sauvagae.jpg"
+        },
+        {
+          festival: "BUSHO",
+          award: "Special mention",
+          year: "",
+          location: "Budapest, Hungary",
+          highlighted: true,
+          image: "/images/awards/busho.jpg"
+        },
+        {
+          festival: "MALTER",
+          award: "2nd prize of the jury",
+          year: "",
+          location: "Debrecen, Hungary",
+          highlighted: true,
+          image: "/images/awards/Maltar.jpg"
+        },
+        {
+          festival: "Stuttgarter Filmwinter",
+          award: "Honorary mention",
+          year: "",
+          location: "Stuttgart, Germany",
+          highlighted: true,
+          image: "/images/awards/wand5.jpg"
+        }
+      ],
       
       // Festival selections
       festivals: [
