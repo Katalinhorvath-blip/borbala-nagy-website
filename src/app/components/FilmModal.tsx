@@ -23,6 +23,9 @@ interface Nomination {
 
 interface Invitation {
   name: string
+  festival?: string
+  location?: string
+  year?: string
   highlighted?: boolean
   image?: string
 }
@@ -425,7 +428,13 @@ const FilmModal = ({
                               />
                             </div>
                           )}
-                          <p>{inv.name}</p>
+                          <div className="invitation-text">
+                            <p><strong>{inv.name}</strong></p>
+                            {inv.festival && <p>{inv.festival}</p>}
+                            {(inv.location || inv.year) && (
+                              <p>{[inv.location, inv.year].filter(Boolean).join(', ')}</p>
+                            )}
+                          </div>
                         </div>
                       );
                     })}
@@ -444,7 +453,15 @@ const FilmModal = ({
                       return <p key={`regular-string-${index}`}>{invitation}</p>
                     } else {
                       const inv = invitation as Invitation;
-                      return <p key={`regular-object-${index}`}>{inv.name}</p>
+                      return (
+                        <div key={`regular-object-${index}`}>
+                          <p><strong>{inv.name}</strong></p>
+                          {inv.festival && <p>{inv.festival}</p>}
+                          {(inv.location || inv.year) && (
+                            <p>{[inv.location, inv.year].filter(Boolean).join(', ')}</p>
+                          )}
+                        </div>
+                      )
                     }
                   })}
               </div>
@@ -480,7 +497,7 @@ const FilmModal = ({
             )}
             
             <div className="film-modal-section">
-              <h3>Production team</h3>
+              <h3>Crew</h3>
               {film.writtenAndDirectedBy && (
                 <p><strong>Written & directed by:</strong> {film.writtenAndDirectedBy}</p>
               )}

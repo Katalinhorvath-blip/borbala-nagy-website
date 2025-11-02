@@ -35,31 +35,43 @@ const staticFilmsData = [
       // Cast information
       mainCast: [],
       
-      // Production team
+      // Crew
       producer: "Petra Iványi (Lupa Pictures)",
       
       // Awards and recognition
       invitations: [
         "Brussels Co-Production Forum (Belgium, 2022)",
         {
-          name: "Cannes Cinéfondation Residence (France, 2021-2022)",
+          name: "Cannes Cinéfondation Residence",
+          festival: "Cannes Film Festival",
+          location: "France",
+          year: "2021-2022",
           highlighted: true,
           image: "/images/invitations/cinef_res.png"
         },
         {
-          name: "Berlin AiR Artist-in-Residence (Israel, 2021)",
+          name: "Berlin AiR Artist-in-Residence",
+          festival: "Berlin AiR",
+          location: "Israel", 
+          year: "2021",
           highlighted: true,
           image: "/images/invitations/berl.png"
         },
         {
-          name: "Pop Up Film Residency (Slovakia, 2021)",
+          name: "Pop Up Film Residency",
+          festival: "Pop Up Film",
+          location: "Slovakia",
+          year: "2021",
           highlighted: true,
           image: "/images/invitations/POP-UP-logo-small.png"
         },
         {
-          name: "CineLink Industry Days – Sarajevo Film Festival (Bosnia and Herzegovina, 2020)",
+          name: "CineLink Industry Days",
+          festival: "Sarajevo Film Festival",
+          location: "Bosnia and Herzegovina",
+          year: "2020",
           highlighted: true,
-          image: "/images/invitations/OIP.webp"
+          image: "/images/invitations/cinelink.png"
         },
         "Inkubátor – Debut Film Forum (Hungary, 2021)",
         "Cutting Edge Talent Camp – International Filmfestival Mannheim-Heidelberg (Germany, 2020)",
@@ -106,7 +118,7 @@ const staticFilmsData = [
         "Anne-Sophie Marie"
       ],
       
-      // Production team
+      // Crew
       producer: "Petra Iványi (Lupa Pictures), Margarita Amineva-Jester (Voices Films)",
       coProducers: [
         "Julie Paratian (Sister Productions)", 
@@ -117,7 +129,7 @@ const staticFilmsData = [
       soundDesign: "Tamás Bohács",
       originalScore: "Selma Mutal",
       
-      // Producer logos (production team)
+      // Producer logos (crew)
       productionLogos: [
         "/images/producers/lupa_tipo_logo_fekete copy.png",
         "/images/producers/VF_Logo_04-2022_015.png",
@@ -198,7 +210,7 @@ const staticFilmsData = [
         "Zsuzsa Faragó"
       ],
       
-      // Production team
+      // Crew
       producer: "Margarita Amineva-Jester",
       directorOfPhotography: "Moritz Friese",
       editing: "László Dunai",
@@ -377,7 +389,7 @@ const staticFilmsData = [
         "Ákos Orosz"
       ],
       
-      // Production team
+      // Crew
       producer: "Luise Hauschild",
       directorOfPhotography: "Constantin Campean",
       editing: "László Dunai",
@@ -456,7 +468,7 @@ const staticFilmsData = [
         "Kim Schnitzer"
       ],
       
-      // Production team
+      // Crew
       directorOfPhotography: "Constantin Campean",
       editing: "Borbála Nagy",
       soundDesign: "Andor Horváth",
@@ -517,7 +529,7 @@ const staticFilmsData = [
         "Luise Aschenbrenner"
       ],
       
-      // Production team
+      // Crew
       producer: "Senem Göcmen",
       directorOfPhotography: "Faraz Fesharaki",
       editing: "Borbála Nagy",
@@ -577,7 +589,7 @@ const staticFilmsData = [
         "Levente Orbán"
       ],
       
-      // Production team
+      // Crew
       producer: "Margarita Amineva-Jester",
       directorOfPhotography: "Marianne Andrea Borowiec",
       editing: "Borbála Nagy, Máté Feles",
@@ -645,7 +657,7 @@ const staticFilmsData = [
         "Luise Deborah Daberkow"
       ],
       
-      // Production team
+      // Crew
       directorOfPhotography: "Moritz Friese",
       editing: "Borbála Nagy",
       soundDesign: "Tamás Bohács",
@@ -699,7 +711,7 @@ const staticFilmsData = [
         "Javeh Asefdjah"
       ],
       
-      // Production team
+      // Crew
       directorOfPhotography: "Susanne Heinrich",
       editing: "Borbála Nagy",
       soundDesign: "Tamás Bohács",
