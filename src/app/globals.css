@@ -352,7 +352,6 @@ button:focus {
   align-items: center;
   gap: 20px;
   text-align: center;
-  display: flex;
 }
 
 .hero-text {
@@ -716,143 +715,6 @@ button:focus {
   -webkit-line-clamp: 4;
   line-clamp: 4;
   -webkit-box-orient: vertical;
-}
-
-/* Film Detail Page Styles */
-.film-detail-page {
-  background: #FDF4EC;
-  min-height: 100vh;
-}
-
-.film-detail-container {
-  padding-top: 120px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 80px;
-  display: flex;
-  justify-content: center;
-}
-
-.film-detail-content {
-  width: 100%;
-  max-width: 1000px;
-}
-
-.film-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.film-header-content {
-  margin-bottom: 20px;
-}
-
-.film-detail-title {
-  color: #333333;
-  font-size: 48px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  line-height: 58px;
-  letter-spacing: 3.36px;
-  margin: 0 0 20px 0;
-}
-
-.film-detail-description {
-  color: #333333;
-  font-size: 16px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 300;
-  line-height: 24px;
-  letter-spacing: 1.12px;
-  margin: 0;
-}
-
-.film-gallery-section {
-  margin-bottom: 48px;
-}
-
-.film-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.film-gallery-item {
-  width: 100%;
-  height: 300px;
-  background: rgba(51, 51, 51, 0.10);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #333333;
-  font-size: 14px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.98px;
-}
-
-.film-info-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-}
-
-.film-info-column h2 {
-  color: #333333;
-  font-size: 20px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 1.4px;
-  margin: 0 0 20px 0;
-}
-
-.film-details-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.film-detail-item {
-  color: #333333;
-  font-size: 14px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 300;
-  line-height: 20px;
-  letter-spacing: 0.98px;
-}
-
-.film-detail-label {
-  font-weight: 600;
-}
-
-.film-credits-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.film-description-section {
-  margin-bottom: 48px;
-}
-
-.film-description-title {
-  color: #333333;
-  font-size: 24px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  margin: 0 0 24px 0;
-}
-
-.film-description-text {
-  color: #333333;
-  font-size: 16px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 300;
-  line-height: 26px;
-  margin: 0;
 }
 
 /* Contact Page Styles */
@@ -1616,73 +1478,6 @@ button:focus {
   transform: translateY(-50%) scale(1.05);
 }
 
-/* Featured Awards - Special prominence for top awards */
-.featured-awards-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  margin: 30px 0;
-  padding: 20px;
-  background: linear-gradient(135deg, rgba(241, 87, 77, 0.08) 0%, rgba(125, 180, 236, 0.08) 100%);
-  border-radius: 8px;
-  border: 2px solid rgba(241, 87, 77, 0.2);
-}
-
-.featured-award {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 280px;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 6px;
-  border: 1px solid rgba(241, 87, 77, 0.3);
-  transition: all 0.3s ease;
-}
-
-.featured-award:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(241, 87, 77, 0.15);
-  border-color: rgba(241, 87, 77, 0.5);
-}
-
-.featured-image {
-  text-align: center;
-  margin-bottom: 12px;
-  background: none;
-  padding: 0;
-}
-
-.featured-text p {
-  margin: 4px 0;
-  font-weight: 400;
-  text-align: center;
-  font-size: 15px;
-  color: #333;
-  line-height: 22px;
-}
-
-.featured-text strong {
-  color: #EF484E;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-/* Responsive featured awards */
-@media (max-width: 768px) {
-  .featured-awards-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .featured-award {
-    max-width: 100%;
-    width: 100%;
-  }
-}
-
 /* Highlighted items for Awards and Invitations */
 .highlighted-items-container {
   display: flex;
@@ -1758,32 +1553,7 @@ button:focus {
   font-weight: 600;
 }
 
-/* Producer logos specific layout */
-.producer-logos-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-  margin: 20px 0;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.producer-logos-container .highlighted-item:nth-child(4),
-.producer-logos-container .highlighted-item:nth-child(5) {
-  grid-column: 2 / span 1;
-  grid-row: 2;
-}
-
-.producer-logos-container .highlighted-item:nth-child(4) {
-  grid-column: 1 / span 1;
-}
-
-.producer-logos-container .highlighted-item:nth-child(5) {
-  grid-column: 3 / span 1;
-}
+/* Financing logo grid layout for film modals */
 
 /* Financing logos at bottom */
 .financing-logos-bottom {
