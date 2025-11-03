@@ -9,23 +9,13 @@ export default function Contact() {
         <div className="content-wrapper-about">
           <div className="contact-grid">
             {/* Left Column - Contact Information */}
-            <div className="press-section">
-              <h2 className="press-section-title">Contact Information</h2>
-              
+            <div className="press-section">              
               <div className="press-subsection">
                 <h3 className="press-subsection-title">Email</h3>
                 <p className="press-subsection-content">
                   <a className="press-link" href="mailto:mail@borbalanagy.com" >mail@borbalanagy.com</a>
                 </p>
               </div>
-
-              <div className="press-subsection">
-                <h3 className="press-subsection-title">Location</h3>
-                <p className="press-subsection-content">
-                  Berlin, Germany
-                </p>
-              </div>
-
               <div className="press-subsection">
                 <h3 className="press-subsection-title">Professional Links</h3>
                 <div className="press-links">
@@ -42,7 +32,6 @@ export default function Contact() {
                       height={20}
                       className="social-icon"
                     />
-                    Instagram
                   </a>
                   <a 
                     href="https://vimeo.com/borbalanagy" 
@@ -57,7 +46,6 @@ export default function Contact() {
                       height={20}
                       className="social-icon"
                     />
-                    Vimeo
                   </a>
                   <a 
                     href="https://www.linkedin.com/in/borb%C3%A1la-nagy-07a55a111/" 
@@ -72,7 +60,6 @@ export default function Contact() {
                       height={20}
                       className="social-icon"
                     />
-                    LinkedIn
                   </a>
                   <a 
                     href="https://www.imdb.com/de/name/nm5980531/?ref_=fn_all_nme_1" 
@@ -87,7 +74,6 @@ export default function Contact() {
                       height={20}
                       className="social-icon"
                     />
-                    IMDb
                   </a>
                   <a
                     href="https://www.crew-united.com/de/Borbala-Nagy_348171.html#!searchterm=borbala%20nagy" 
@@ -110,8 +96,6 @@ export default function Contact() {
 
             {/* Right Column - Languages & Experience */}
             <div className="press-section">
-              <h2 className="press-section-title">Languages & Experience</h2>
-              
               <div className="press-subsection">
                 <h3 className="press-subsection-title">Languages</h3>
                 <p className="press-subsection-content">
