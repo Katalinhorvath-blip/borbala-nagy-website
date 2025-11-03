@@ -131,7 +131,7 @@ const staticFilmsData = [
       // Financing
       financedBy: [
         "Inkubátor Debut Film Program – Hungarian National Film Fund (Hungary)",
-        "ALCA Nouvelle Aquitaine (France)",
+        "ALCA - Nouvelle Aquitaine (France)",
         "DFFB - German Film and Television Academy Berlin (Germany)"
       ],
       
@@ -146,7 +146,6 @@ const staticFilmsData = [
       // Awards and recognition
       awards: [
         {
-          festival: "CONNECTING COTTBUS",
           award: "Cannes Producers Network Award",
           year: "2022",
           location: "Germany",
@@ -154,7 +153,6 @@ const staticFilmsData = [
           image: "/images/awards/cannes_pnaward.png"
         },
         {
-          festival: "BUDAPEST DEBUT FILM FORUM",
           award: "Most Promising Fiction Feature Project",
           year: "2022",
           location: "Hungary",
@@ -229,7 +227,7 @@ const staticFilmsData = [
           image: "/images/awards/German_short_fil_award.png"
         },
         {
-          festival: "Hungarian Film Critics' Prize",
+          festival: "HUNGARIAN FILM CRITICS' PRIZE",
           award: "Best short film",
           year: "",
           location: "",
@@ -238,7 +236,7 @@ const staticFilmsData = [
           image: "/images/awards/Hungarian_film_critics.jpg"
         },
         {
-          festival: "KURZFILMFESTIVAL KÖLN",
+          festival: "Kurzfilmfestival Köln",
           award: "3rd prize of the jury",
           year: "",
           location: "Köln, Germany",
@@ -254,15 +252,15 @@ const staticFilmsData = [
           image: "/images/awards/KFFK2.png"
         },
         {
-          festival: "ACHTUNG BERLIN",
-          award: "Best medium-length film 2020",
+          festival: "Achtung Berlin",
+          award: "Best medium-length film",
           year: "",
           location: "Berlin, Germany",
           highlighted: true,
           image: "/images/awards/achtung.png"
         },
         {
-          festival: "FRISS HÚS",
+          festival: "Friss Hús",
           award: "Best Live-Action Short",
           year: "",
           location: "Budapest, Hungary",
@@ -286,7 +284,7 @@ const staticFilmsData = [
           image: "/images/awards/alter_native.jpg"
         },
         {
-          festival: "FILMSCHOOLFEST",
+          festival: "Filmschoolfest",
           award: "Best production",
           year: "",
           location: "Munich, Germany",
@@ -294,7 +292,7 @@ const staticFilmsData = [
           image: "/images/awards/fest_munich.png"
         },
         {
-          festival: "MALTER",
+          festival: "Malter",
           award: "2nd prize of the jury",
           year: "",
           location: "Debrecen, Hungary",
@@ -318,7 +316,7 @@ const staticFilmsData = [
           image: "/images/awards/Prix_sauvagae.jpg"
         },
         {
-          festival: "BUSHO",
+          festival: "BuSho",
           award: "Special mention",
           year: "",
           location: "Budapest, Hungary",
