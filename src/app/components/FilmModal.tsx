@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 interface Award {
-  festival: string
+  festival?: string
   award: string
   year: string
   location: string
