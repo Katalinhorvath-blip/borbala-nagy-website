@@ -1,6 +1,38 @@
+'use client'
+
+import { useState } from 'react'
 import Header from '../components/Header'
+import ImageModal from '../components/ImageModal'
 
 export default function Press() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
+  const behindTheSceneImages = [
+    {
+      src: '/images/behindthescene/image1.png',
+      alt: 'Behind the Scene 1'
+    },
+    {
+      src: '/images/behindthescene/image2.png',
+      alt: 'Behind the Scene 2'
+    },
+    {
+      src: '/images/behindthescene/image3.png',
+      alt: 'Behind the Scene 3'
+    },
+    {
+      src: '/images/behindthescene/image4.png',
+      alt: 'Behind the Scene 4'
+    }
+  ]
+
+  const openImageModal = (imageSrc: string) => {
+    setSelectedImage(imageSrc)
+  }
+
+  const closeImageModal = () => {
+    setSelectedImage(null)
+  }
   return (
     <div className="page-container-scroll">
       <Header />
@@ -48,6 +80,33 @@ export default function Press() {
                 </div>
               </div>
             </div>
+            
+            {/* Behind the Scene Images Gallery */}
+            <div className="press-gallery-section">
+              <div className="press-gallery-grid">
+                {behindTheSceneImages.map((image, index) => (
+                  <div 
+                    key={index}
+                    className="press-gallery-item"
+                    onClick={() => openImageModal(image.src)}
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="press-gallery-thumbnail"
+                    />
+                    <div className="press-gallery-overlay">
+                      <span className="press-gallery-zoom">+</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Photo Credit */}
+              <div className="image-credit">
+                Photos: Zsófia Sivák
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -56,6 +115,16 @@ export default function Press() {
       <div className="copyright-footer">
         © 2025 Borbála Nagy. All rights reserved.
       </div>
+      
+      {/* Image Modal */}
+      {selectedImage && (
+        <ImageModal
+          isOpen={!!selectedImage}
+          imageSrc={selectedImage}
+          imageAlt="Behind the Scene"
+          onClose={closeImageModal}
+        />
+      )}
     </div>
   )
 }
