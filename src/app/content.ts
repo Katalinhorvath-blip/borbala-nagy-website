@@ -688,8 +688,7 @@ const staticFilmsData = [
         "/images/hannah/image1.png",
         "/images/hannah/image2.png",
         "/images/hannah/image3.png",
-        "/images/hannah/image4.png",
-        "/images/hannah/image5.png"
+        "/images/hannah/image4.png"
       ],
       
       // Trailer
