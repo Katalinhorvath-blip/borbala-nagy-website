@@ -278,25 +278,25 @@ const FilmModal = ({
             <div className="film-modal-section">
               <h3>Awards</h3>
               
-              {/* Featured Awards - Special prominence for first two */}
+              {/* Featured Awards - Top two awards using highlighted style */}
               {film.awards.some(award => award.featured) && (
-                <div className="featured-awards-container">
+                <div className="highlighted-items-container featured-two-items">
                   {film.awards
                     .filter(award => award.featured)
                     .map((award, index) => (
-                      <div key={`featured-${index}`} className="featured-award">
+                      <div key={`featured-${index}`} className="highlighted-item">
                         {award.image && (
-                          <div className="featured-image">
+                          <div className="highlight-image">
                             <Image
                               src={award.image}
                               alt={`${award.award} - ${award.festival}`}
-                              width={250}
-                              height={167}
+                              width={200}
+                              height={133}
                               style={{ objectFit: 'contain' }}
                             />
                           </div>
                         )}
-                        <div className="featured-text">
+                        <div className="award-text">
                           <p><strong>{award.award}</strong></p>
                           <p>{award.festival}</p>
                           {(award.location || award.year) && (
@@ -308,11 +308,9 @@ const FilmModal = ({
                 </div>
               )}
               
-              {/* Other Highlighted Awards in a row */}
+              {/* Other Highlighted Awards - 3 per row */}
               {film.awards.some(award => award.highlighted && !award.featured) && (
-                <div className={`highlighted-items-container ${
-                  (film.awards?.filter(award => award.highlighted && !award.featured).length === 2) ? 'two-items' : ''
-                }`}>
+                <div className="highlighted-items-container three-items">
                   {film.awards
                     .filter(award => award.highlighted && !award.featured)
                     .map((award, index) => (
@@ -322,8 +320,8 @@ const FilmModal = ({
                             <Image
                               src={award.image}
                               alt={`${award.award} - ${award.festival}`}
-                              width={(film.awards?.filter(award => award.highlighted && !award.featured).length === 2) ? 200 : 150}
-                              height={(film.awards?.filter(award => award.highlighted && !award.featured).length === 2) ? 133 : 100}
+                              width={150}
+                              height={100}
                               style={{ objectFit: 'contain' }}
                             />
                           </div>
