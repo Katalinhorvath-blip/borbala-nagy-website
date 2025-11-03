@@ -6,6 +6,9 @@ import Header from '../components/Header'
 import FilmModal from '../components/FilmModal'
 import { films } from '../content'
 
+// Note: For client components, metadata should be handled in layout.tsx or via head tags
+// This is handled by the parent layout
+
 export default function About() {
   const [selectedFilm, setSelectedFilm] = useState<string | null>(null)
 
