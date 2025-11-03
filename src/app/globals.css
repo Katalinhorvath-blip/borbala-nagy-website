@@ -11,31 +11,52 @@
     --page-side-spacing: 20px;
   }
   
-  /* Ensure center alignment on mobile for most content */
-  .main-content {
-    justify-content: center;
+  /* Fix home page layout on mobile */
+  .home-main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+  }
+  
+  .hero-content {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   
   /* Specific fix for home page gallery alignment */
   .hero-gallery {
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gallery-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .gallery-container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  
   .image-slider-container {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
+  }
+  
+  /* Ensure center alignment for other pages */
+  .main-content {
+    justify-content: center;
+    align-items: center;
   }
   
   /* Center content wrappers on mobile for other pages */
@@ -519,6 +540,19 @@ button:focus {
   aspect-ratio: 16/9;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the container */
+}
+
+/* Mobile specific adjustments for image slider */
+@media (max-width: 768px) {
+  .image-slider-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: relative;
+  }
 }
 
 .image-slider-wrapper {
