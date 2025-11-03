@@ -427,9 +427,14 @@ const FilmModal = ({
                 typeof invitation === 'object' && invitation.highlighted
               ) && (
                 <div className={`highlighted-items-container ${
-                  film.invitations.filter(invitation => 
-                    typeof invitation === 'object' && invitation.highlighted
-                  ).length === 2 ? 'two-items' : ''
+                  (() => {
+                    const highlightedCount = film.invitations.filter(invitation => 
+                      typeof invitation === 'object' && invitation.highlighted
+                    ).length;
+                    if (highlightedCount === 2) return 'two-items';
+                    if (highlightedCount === 4) return 'four-items';
+                    return '';
+                  })()
                 }`}>
                   {film.invitations
                     .filter(invitation => 
@@ -447,8 +452,8 @@ const FilmModal = ({
                               <Image
                                 src={inv.image}
                                 alt={`${inv.name} invitation`}
-                                width={highlightedCount === 2 ? 200 : 150}
-                                height={highlightedCount === 2 ? 133 : 100}
+                                width={highlightedCount === 2 ? 200 : highlightedCount === 4 ? 120 : 150}
+                                height={highlightedCount === 2 ? 133 : highlightedCount === 4 ? 80 : 100}
                                 style={{ objectFit: 'contain' }}
                               />
                             </div>

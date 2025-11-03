@@ -1664,6 +1664,18 @@ button:focus {
   flex: 0 1 calc(33.333% - 14px);
 }
 
+/* Four items in one row for invitations */
+.highlighted-items-container.four-items {
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.highlighted-items-container.four-items .highlighted-item {
+  min-width: 120px;
+  max-width: 150px;
+  flex: 0 1 calc(25% - 15px);
+}
+
 .highlighted-item:hover {
   transform: none;
   box-shadow: none;

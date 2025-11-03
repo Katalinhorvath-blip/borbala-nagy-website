@@ -12,7 +12,6 @@ const staticFilmsData = [
       ],
       awards: [
         {
-          festival: "BUDAPEST DEBUT FILM FORUM",
           award: "Most Promising Fiction Feature Project",
           year: "2022",
           location: "Hungary",
@@ -20,7 +19,6 @@ const staticFilmsData = [
           image: "/images/awards/BDFF_logo.png"
         },
         {
-          festival: "WENDLAND FILM FESTIVAL",
           award: "Best Pitch",
           year: "2019",
           location: "Germany",
