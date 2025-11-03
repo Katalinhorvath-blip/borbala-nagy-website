@@ -566,7 +566,8 @@ const staticFilmsData = [
         "/images/somewhere-else/image2.png",
         "/images/somewhere-else/image3.png",
         "/images/somewhere-else/image4.png",
-        "/images/somewhere-else/image5.png"
+        "/images/somewhere-else/image5.png",
+        "/images/somewhere-else/image6.png"
       ],
       
       // Trailer
@@ -601,7 +602,9 @@ const staticFilmsData = [
           festival: "ACHTUNG BERLIN",
           award: "Special mention",
           year: "2015",
-          location: "Germany"
+          location: "Germany",
+          highlighted: true,
+          image: "/images/awards/achtung2016.png"
         }
       ],
       
