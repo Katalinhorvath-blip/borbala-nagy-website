@@ -681,8 +681,8 @@ const staticFilmsData = [
       originalTitle: "Hannah",
       synopsis: "Two elderly men wander through the Jewish cemetery in Berlin, searching for the grave of their long-lost friend, Hannah, whom they haven't seen in decades. As they make their way among the tombstones, old stories begin to resurface. Nostalgia, jealousy, and a patchwork of memories intertwine as they recall the past, each with their own version of the truth.",
       images: [
-        "/images/hannah/image1.png",
         "/images/hannah/image2.png",
+        "/images/hannah/image1.png",
         "/images/hannah/image3.png",
         "/images/hannah/image4.png"
       ],
