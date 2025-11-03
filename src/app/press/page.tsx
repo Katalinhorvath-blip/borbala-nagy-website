@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Header from '../components/Header'
 import ImageModal from '../components/ImageModal'
 
@@ -90,10 +91,13 @@ export default function Press() {
                     className="press-gallery-item"
                     onClick={() => openImageModal(image.src)}
                   >
-                    <img
+                    <Image
                       src={image.src}
                       alt={image.alt}
+                      width={300}
+                      height={200}
                       className="press-gallery-thumbnail"
+                      style={{ objectFit: 'cover' }}
                     />
                     <div className="press-gallery-overlay">
                       <span className="press-gallery-zoom">+</span>
