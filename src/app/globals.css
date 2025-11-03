@@ -10,6 +10,20 @@
   :root {
     --page-side-spacing: 20px;
   }
+  
+  /* Ensure center alignment on mobile */
+  .main-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Center content wrappers on mobile */
+  .content-wrapper,
+  .content-wrapper-about {
+    align-items: center;
+    text-align: left; /* Reset text alignment for content */
+  }
 }
 
 body {
@@ -135,7 +149,7 @@ button:focus {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1003; /* Highest z-index to ensure it's always clickable */
   position: relative;
   width: 30px;
   height: 30px;
@@ -177,7 +191,7 @@ button:focus {
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 1001; /* Higher than logo */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -198,7 +212,7 @@ button:focus {
   background: #EF484E;
   transform: translateX(100%);
   transition: transform 0.3s ease;
-  z-index: 1000;
+  z-index: 1002; /* Higher than overlay and logo */
   padding-top: 100px;
   padding-left: 40px;
   padding-right: 40px;
@@ -456,6 +470,25 @@ button:focus {
   transform: translateX(-50%);
   margin-top: 0;
   padding-bottom: 12px;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Mobile footer adjustments */
+@media (max-width: 768px) {
+  .page-container .copyright-footer {
+    font-size: 11px; /* Slightly smaller font on mobile */
+    bottom: 12px; /* More space from bottom */
+  }
+}
+
+/* For very small screens, allow wrapping but keep it controlled */
+@media (max-width: 360px) {
+  .page-container .copyright-footer {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    bottom: 8px;
+  }
 }
 
 /* Image Slider Component Styles */
@@ -1123,6 +1156,20 @@ button:focus {
     gap: 32px;
   }
   
+  /* Vision page image responsiveness */
+  .image-container {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .director-image {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 400px;
+    object-fit: cover;
+  }
+  
   .text-container,
   .text-container-vision {
     width: 100%;
@@ -1130,6 +1177,12 @@ button:focus {
   
   .works-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 15px; /* Slightly smaller gap for more space */
+  }
+  
+  /* Make film cards bigger on mobile */
+  .works-grid .film-card {
+    min-height: 200px; /* Ensure minimum height */
   }
   
   .works-grid-bottom {
@@ -1158,18 +1211,16 @@ button:focus {
 
 @media (max-width: 480px) {
   .works-grid {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
-    padding-bottom: 10px;
-    scroll-snap-type: x mandatory;
+    /* Remove horizontal scroll, use single column for better mobile experience */
   }
   
   .works-grid .film-card {
-    flex: 0 0 280px; /* Fixed width for horizontal scrolling */
-    scroll-snap-align: start;
+    width: 100%;
+    min-height: 220px; /* Bigger height for single column layout */
+    aspect-ratio: 16/10;
   }
   
   .hero-content {
