@@ -85,7 +85,7 @@ const staticFilmsData = [
       duration: "92'",
       year: "In post-production",
       language: "Hungarian, English, German, French",
-      synopsis: "Somewhere in Europe, three Hungarian women are having a difficult day. While navigating life-changing decisions beyond the so-called norm, they are confronted with the issues of late motherhood. On their path toward self-determination, one question echoes: How free are they, really, to live the lives they desire?",
+      synopsis: "Somewhere in Europe, three women are having a difficult day. While navigating life-changing decisions beyond the so-called norm, they are confronted with the issues of late motherhood. On their path toward self-determination, one question echoes: How free are they, really, to live the lives they desire?",
       images: [
         "/images/mambo-maternica/image1.png", 
         "/images/mambo-maternica/image2.png", 
@@ -244,7 +244,7 @@ const staticFilmsData = [
           image: "/images/awards/KFFK.png"
         },
         {
-          festival: "KURZFILMFESTIVAL KÖLN",
+          festival: "Kurzfilmfestival Köln",
           award: "Audience award",
           year: "",
           location: "Köln, Germany",

@@ -191,8 +191,24 @@ const FilmModal = ({
             </div>
           </div>
 
-          {/* Image Gallery */}
-          <div className="film-modal-gallery">
+          {/* Conditional Layout: Trailer first if available, otherwise Gallery first */}
+          {film.trailer ? (
+            <>
+              {/* Trailer (when available, show first) */}
+              <div className="film-modal-trailer">
+                <div className="trailer-container">
+                  <iframe
+                    src={film.trailer}
+                    title={`${film.title} Trailer`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+
+              {/* Image Gallery (when trailer exists, show after trailer) */}
+              <div className="film-modal-gallery">
             {film.images && film.images.length > 0 ? (
               <div className="film-gallery-container">
                 <div className="film-gallery-main">
@@ -264,6 +280,82 @@ const FilmModal = ({
               </div>
             )}
           </div>
+            </>
+          ) : (
+            /* No trailer - Gallery first (original layout) */
+            <div className="film-modal-gallery">
+              {film.images && film.images.length > 0 ? (
+                <div className="film-gallery-container">
+                  <div className="film-gallery-main">
+                    <div className="film-modal-main-image">
+                      {film.images[currentImageIndex] ? (
+                        <Image
+                          src={film.images[currentImageIndex]}
+                          alt={`${film.title} - Image ${currentImageIndex + 1}`}
+                          fill
+                          style={{ objectFit: 'contain' }}
+                        />
+                      ) : (
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: '#666' }}>
+                          <p>Image not available</p>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* Gallery Navigation Arrows */}
+                    {film.images.length > 1 && (
+                      <>
+                        <button 
+                          onClick={() => setCurrentImageIndex(prev => {
+                            const newIndex = prev === 0 ? film.images.length - 1 : prev - 1
+                            return Math.max(0, Math.min(newIndex, film.images.length - 1))
+                          })}
+                          className="gallery-nav gallery-prev"
+                        >
+                          ←
+                        </button>
+                        <button 
+                          onClick={() => setCurrentImageIndex(prev => {
+                            const newIndex = prev === film.images.length - 1 ? 0 : prev + 1
+                            return Math.max(0, Math.min(newIndex, film.images.length - 1))
+                          })}
+                          className="gallery-nav gallery-next"
+                        >
+                          →
+                        </button>
+                      </>
+                    )}
+                  </div>
+                  
+                  {/* Thumbnail Strip */}
+                  {film.images.length > 1 && (
+                    <div className="film-gallery-thumbnails">
+                      {film.images.map((image, index) => (
+                        image ? (
+                          <button
+                            key={index}
+                            onClick={() => setCurrentImageIndex(index)}
+                            className={`thumbnail ${index === currentImageIndex ? 'active' : ''}`}
+                          >
+                            <Image
+                              src={image}
+                              alt={`${film.title} - Thumbnail ${index + 1}`}
+                              fill
+                              style={{ objectFit: 'cover' }}
+                            />
+                          </button>
+                        ) : null
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="film-modal-main-image" style={{ background: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#666' }}>
+                  <p>No images available</p>
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Synopsis */}
           <div className="film-modal-description">
@@ -503,21 +595,6 @@ const FilmModal = ({
             <div className="film-modal-section">
               <h3>Festivals</h3>
               <p>{film.festivals.join(', ')}</p>
-            </div>
-          )}
-
-          {/* Trailer */}
-          {film.trailer && (
-            <div className="film-modal-trailer">
-              <div className="trailer-container">
-                <iframe
-                  src={film.trailer}
-                  title={`${film.title} Trailer`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
             </div>
           )}
 
