@@ -70,8 +70,8 @@ export default function Contact() {
                     <Image
                       src="/images/social/imdb.svg"
                       alt="IMDb"
-                      width={20}
-                      height={20}
+                      width={40}
+                      height={40}
                       className="social-icon"
                     />
                   </a>
@@ -84,11 +84,10 @@ export default function Contact() {
                     <Image
                       src="/images/social/crewunited.svg"
                       alt="Crew United"
-                      width={20}
-                      height={20}
+                      width={40}
+                      height={40}
                       className="social-icon"
                     />
-                    Crew United
                   </a>
                 </div>
               </div>
