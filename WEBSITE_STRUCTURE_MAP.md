@@ -203,5 +203,137 @@ Borbála Nagy Filmmaker Website
 └── 🌐 Ready for Vercel deployment
 ```
 
+## 📐 DESIGN RULES & RESTRICTIONS
+
+### 🏠 HOME PAGE LAYOUT REQUIREMENTS
+```
+✅ MANDATORY RULES
+├── Landing page MUST fit in one screen (no vertical scroll)
+├── Hero section should be visible without scrolling
+├── Header stays at top (80px fixed height)
+└── Copyright footer must be visible at bottom
+
+📱 MOBILE RESPONSIVENESS (≤768px)
+├── Page must fit in viewport on all mobile screen sizes
+├── NO horizontal scrolling allowed
+├── Copyright footer pushes content up (not the header)
+└── Maintain optical centering of hero content
+
+🎯 ELEMENT PRIORITY ON SMALL SCREENS
+├── 1. Header - Fixed at 80px (never shrinks)
+├── 2. Gallery - Maintain visibility (38-45vh height)
+├── 3. Hero Text - SHRINKS FIRST (aggressive compression)
+├── 4. CTA Button - Shrinks proportionally
+└── 5. Copyright Footer - Always visible at bottom
+
+📏 TEXT COMPRESSION RULES
+├── Desktop: 16-20px font size
+├── Mobile (≤768px): 11-16px → starts shrinking
+├── Short screens (≤700px height): 10-13px
+├── Ultra-small (≤600px height): 9-11px
+└── Text should shrink before gallery gets covered
+
+🖼️ GALLERY RULES
+├── Desktop: max-height 60vh
+├── Mobile: max-height 38vh (fixed, doesn't shrink)
+├── Gallery must remain fully visible (not covered)
+├── Gallery has flex-shrink: 0 (does not compress)
+└── Overflow: visible (nothing gets cut off)
+
+📐 VERTICAL SPACE DISTRIBUTION
+├── Use flexbox with justify-content: space-between
+├── Hero content: flex-shrink: 2 (shrinks twice as fast)
+├── Gallery: flex-shrink: 0 (maintains size)
+├── Footer: flex-shrink: 0 (always visible)
+└── Dynamic gaps using clamp() for fluid spacing
+```
+
+### 🎨 STYLING ARCHITECTURE RULES
+```
+✅ STYLE ORGANIZATION
+├── ALL styles go in /src/app/globals.css
+├── NO inline styles in TSX/JSX files
+├── NO style-related code in component files
+├── Use CSS classes exclusively
+└── Maintain separation of concerns
+
+📱 RESPONSIVE BREAKPOINTS
+├── Desktop: min-width 768px
+├── Mobile: max-width 768px
+├── Short screens: max-height 700px
+├── Ultra-small: max-height 600px
+└── Combine width + height for precise control
+
+🎯 MOBILE-FIRST APPROACH
+├── Base styles for mobile
+├── Progressive enhancement for desktop
+├── Aggressive text compression on small screens
+├── Maintain visual hierarchy at all sizes
+└── Prioritize content visibility over aesthetics
+```
+
+### 🔒 BRAND & DESIGN CONSTRAINTS
+```
+🎨 BRAND COLORS (STRICT)
+├── Primary: #F1574D (coral/red) - CTA buttons, accents
+├── Secondary: #7DB4EC (light blue) - Minimal use
+├── Background: #FDF4EC (cream) - All pages
+├── Text: #333333 (dark gray) - Body text
+└── White: #FFFFFF - Buttons, overlays
+
+✨ BRAND VALUES (GUIDE DESIGN)
+├── Trustworthy - Clean, professional layouts
+├── Courageous - Bold typography, confident spacing
+├── Sincere - Authentic content presentation
+├── Mature - Sophisticated color palette, refined UI
+└── Professional - Film industry standards
+
+🎯 OPTICAL CENTERING
+├── Hero content should appear optically centered
+├── Not mathematically centered (feels too low)
+├── Account for visual weight of elements
+├── Use space-between for natural distribution
+└── Gallery provides visual anchor at bottom
+
+🚫 RESTRICTIONS
+├── NO horizontal scroll on any device
+├── NO content overflow (all must be visible)
+├── NO covering gallery with footer
+├── NO adding styles to TSX files
+├── NO fixed heights that break responsive design
+└── NO removing copyright footer to save space
+```
+
+### 🔧 TECHNICAL IMPLEMENTATION NOTES
+```
+📐 FLEXBOX LAYOUT
+├── .page-container: height 100vh, overflow hidden
+├── .home-main: flex column, justify-content space-between
+├── .hero-content: flex-shrink 2, min-height 0
+├── .hero-gallery: flex-shrink 0 (maintains size)
+└── .copyright-footer: flex-shrink 0, always visible
+
+📏 RESPONSIVE UNITS
+├── Use clamp() for fluid typography
+├── vh units for height constraints
+├── vw units for width-based scaling
+├── Combine min/max for precise control
+└── box-sizing: border-box everywhere
+
+🎯 Z-INDEX LAYERS
+├── Mobile menu: 1002
+├── Mobile overlay: 1001
+├── Header logo: 1001
+├── Copyright footer: 10
+└── Modals: Higher as needed
+
+⚡ PERFORMANCE
+├── Avoid deep nesting in CSS
+├── Use CSS variables for consistency
+├── Minimize layout shifts
+├── Optimize for mobile devices
+└── Test on real devices when possible
+```
+
 ---
-*This map represents the complete structure of Borbála Nagy's filmmaker portfolio website as of October 2025.*
+*This map represents the complete structure of Borbála Nagy's filmmaker portfolio website as of January 2026.*

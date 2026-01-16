@@ -91,8 +91,12 @@ const staticFilmsData = [
         "/images/mambo-maternica/image2.png", 
         "/images/mambo-maternica/image3.png",
         "/images/mambo-maternica/image4.png",
-        "/images/mambo-maternica/image5.png"
+        "/images/mambo-maternica/image5.png",
+        "/images/mambo-maternica/image6.png"
       ],
+      
+      // Trailer
+      trailer: "https://player.vimeo.com/video/1155026036?badge=0&autopause=0&player_id=0&app_id=58479",
       
       // Core production info
       writtenAndDirectedBy: "Borbála Nagy",

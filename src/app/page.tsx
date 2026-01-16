@@ -70,11 +70,11 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
-      
-      {/* Copyright Footer */}
-      <div className="copyright-footer">
-        © 2025 Borbála Nagy. All rights reserved.
+        
+        {/* Copyright Footer */}
+        <div className="copyright-footer">
+          © 2025 Borbála Nagy. All rights reserved.
+        </div>
       </div>
 
       {/* Film Modal */}
