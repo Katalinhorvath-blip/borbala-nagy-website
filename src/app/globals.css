@@ -515,10 +515,10 @@ button:focus {
 .home-main {
   width: 100%;
   max-width: 1440px;
-  height: calc(100vh - 80px); /* Full height minus header */
+  height: calc(95vh - 80px); /* Reduced to 95vh to fit footer */
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 8px;
+  padding-top: 10px;
+  padding-bottom: 5px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -610,8 +610,9 @@ button:focus {
 
 .hero-gallery {
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
   flex-shrink: 1;
   min-height: 0;
   display: flex;
@@ -632,13 +633,16 @@ button:focus {
   font-size: 12px;
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
-  padding: 12px 20px;
+  padding: 6px 20px;
   flex-shrink: 0;
   flex-grow: 0;
   width: 100%;
   white-space: nowrap;
   background: #FDF4EC;
   z-index: 10;
+  visibility: visible;
+  display: block;
+  margin: 0;
 }
 
 /* Mobile footer adjustments */
