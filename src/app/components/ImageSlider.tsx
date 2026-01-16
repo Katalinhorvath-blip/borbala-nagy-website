@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 interface ImageSliderProps {
   images: string[]
@@ -41,13 +42,15 @@ const ImageSlider = ({
         width: '100%',
         height: '100%'
       }}>
-        <img
+        <Image
           src={images[currentIndex]}
           alt={`${alt} - ${currentIndex + 1}`}
+          fill={true}
           className="image-slider-image"
           style={{
             transition: 'opacity 300ms ease-in-out',
-            opacity: isTransitioning ? 0.7 : 1
+            opacity: isTransitioning ? 0.7 : 1,
+            objectFit: 'cover'
           }}
         />
       </div>

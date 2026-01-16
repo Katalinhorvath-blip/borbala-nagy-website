@@ -67,6 +67,15 @@
   }
 }
 
+/* Shrink hero text on short mobile screens to prevent footer overlap */
+@media (max-width: 768px) and (max-height: 600px) {
+  .hero-text-span, .hero-text-bold {
+    font-size: clamp(14px, 2.5vw, 16px);
+    line-height: clamp(18px, 3vw, 20px);
+    letter-spacing: clamp(0.6px, 0.2vw, 1px);
+  }
+}
+
 body {
   background: #FDF4EC;
   color: #333333;
