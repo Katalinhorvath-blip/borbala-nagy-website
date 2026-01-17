@@ -12,7 +12,7 @@ export default function Vision() {
             <div className="text-container">
               <div className="bio-text">
                 <span className="vision-quote">
-                  &ldquo;I believe that stories told through the female gaze create space for more honest and complex portrayals of human experience&mdash;fostering empathy and expanding our understanding of the world.&rdquo;
+                  &ldquo;I believe that stories told through the female gaze create space for more honest portrayals of human experience, fostering empathy and a deeper understanding of our world.&rdquo;
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">

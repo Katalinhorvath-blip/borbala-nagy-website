@@ -1289,6 +1289,17 @@ button:focus {
   z-index: 10;
 }
 
+/* Copyright Footer centered for scrollable pages (About, Vision, Works, Contact, Press) */
+.page-container-scroll .copyright-footer,
+.works-container .copyright-footer {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* Film Detail Page Styles */
 .film-detail-container {
   width: 100%;
@@ -1772,11 +1783,11 @@ button:focus {
 .film-gallery-main {
   position: relative;
   width: 100%;
-  height: 450px;
-  margin-bottom: 20px;
+  aspect-ratio: 16/9;
+  margin-bottom: 10px;
   border-radius: 0;
   overflow: hidden;
-  background: #f5f5f5;
+  background: transparent;
 }
 
 .film-modal-main-image {
@@ -1785,7 +1796,7 @@ button:focus {
   height: 100%;
   border-radius: 0;
   overflow: hidden;
-  background: #f5f5f5;
+  background: transparent;
 }
 
 .film-gallery-thumbnails {
@@ -1793,7 +1804,7 @@ button:focus {
   gap: 12px;
   justify-content: center;
   overflow-x: auto;
-  padding: 10px 0;
+  padding: 5px 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -2099,6 +2110,38 @@ button:focus {
   
   .trailer-container {
     padding-bottom: 56.25%; /* Maintain 16:9 on mobile */
+  }
+}
+
+/* Poster Section */
+.poster-section {
+  width: 100%;
+  max-width: 800px;
+}
+
+.poster-separator {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  margin-bottom: 30px;
+}
+
+.poster-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.poster-container img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .poster-container img {
+    max-width: 280px;
   }
 }
 

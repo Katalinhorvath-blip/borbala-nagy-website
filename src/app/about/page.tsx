@@ -67,7 +67,7 @@ export default function About() {
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
-                  Borbála Nagy is an alumna of Cannes Cinéfondation Residence, Berlinale Talents and Talents Sarajevo, member of the EWA - European Women&apos;s Audiovisual Network. She serves as a curator and jury member for various film festivals.
+                  Member of the German Film Academy and the EWA - European Women&apos;s Audiovisual Network, alumna of Cannes Cinéfondation Residence and Berlinale Talents, curator for various international film festivals.
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">

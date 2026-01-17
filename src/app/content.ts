@@ -83,7 +83,7 @@ const staticFilmsData = [
       title: "MAMBO MATERNICA",
       type: "Fiction",
       duration: "92'",
-      year: "In post-production",
+      year: "2026",
       language: "Hungarian, English, German, French",
       synopsis: "Somewhere in Europe, three women are having a difficult day. While navigating life-changing decisions beyond the so-called norm, they are confronted with the issues of late motherhood. On their path toward self-determination, one question echoes: How free are they, really, to live the lives they desire?",
       images: [
@@ -91,9 +91,11 @@ const staticFilmsData = [
         "/images/mambo-maternica/image2.png", 
         "/images/mambo-maternica/image3.png",
         "/images/mambo-maternica/image4.png",
-        "/images/mambo-maternica/image5.png",
-        "/images/mambo-maternica/image6.png"
+        "/images/mambo-maternica/image5.png"
       ],
+      
+      // Poster
+      posterImage: "/images/mambo-maternica/image6.png",
       
       // Trailer
       trailer: "https://player.vimeo.com/video/1155026036?badge=0&autopause=0&player_id=0&app_id=58479",
@@ -136,41 +138,18 @@ const staticFilmsData = [
       financedBy: [
         "Inkubátor Debut Film Program – Hungarian National Film Fund (Hungary)",
         "ALCA - Nouvelle Aquitaine (France)",
-        "DFFB - German Film and Television Academy Berlin (Germany)"
+        "DFFB - German Film and Television Academy Berlin (Germany)",
+        "Die Beauftragte der Bundesregierung für Kultur und Medien (Germany)"
       ],
       
-      // Financing logos
-      financingLogos: [
-        "/images/producers/dffb-logo.png",
-        "/images/producers/nfi.png",
-        "/images/producers/alca.png",
-        "/images/producers/BKM.png"
-      ],
+      // Financing logos (hidden for now)
+      financingLogos: [],
       
-      // Awards and recognition
-      awards: [
-        {
-          award: "Cannes Producers Network Award",
-          year: "2022",
-          location: "Germany",
-          highlighted: true,
-          image: "/images/awards/cannes_pnaward.png"
-        },
-        {
-          award: "Most Promising Fiction Feature Project",
-          year: "2022",
-          location: "Hungary",
-          highlighted: true,
-          image: "/images/awards/BDFF_logo.png"
-        }
-      ],
+      // Awards and recognition (hidden for now - to be updated)
+      awards: [],
       
-      // Festival invitations and participation
-      invitations: [
-        "Full Circle Lab / Nouvelle Aquitaine – script development (France, 2022)",
-        "First Cut Lab – work in progress editing consultation (online, 2024)",
-        "First Cut+ – work in progress presentation at Karlovy Vary International Film Festival (Czechia, 2024)"
-      ]
+      // Festival invitations and participation (hidden for now - to be updated)
+      invitations: []
     },
     {
       id: "land-of-glory",
@@ -186,9 +165,11 @@ const staticFilmsData = [
         "/images/land-of-glory/image2.png",
         "/images/land-of-glory/image3.png",
         "/images/land-of-glory/image4.png",
-        "/images/land-of-glory/image5.png",
-        "/images/land-of-glory/image6.png",
+        "/images/land-of-glory/image5.png"
       ],
+      
+      // Poster
+      posterImage: "/images/land-of-glory/image6.png",
       
       // Trailer
       trailer: "https://player.vimeo.com/video/434508735",
@@ -370,9 +351,11 @@ const staticFilmsData = [
       images: [
         "/images/everything-alright/image1.png",
         "/images/everything-alright/image2.png",
-        "/images/everything-alright/image3.png",
-        "/images/everything-alright/image4.png"
+        "/images/everything-alright/image3.png"
       ],
+      
+      // Poster
+      posterImage: "/images/everything-alright/image4.png",
       
       // Trailer
       trailer: "https://player.vimeo.com/video/258494620",
@@ -505,9 +488,11 @@ const staticFilmsData = [
       images: [
         "/images/cross-country-drive/image1.png",
         "/images/cross-country-drive/image2.png",
-        "/images/cross-country-drive/image3.png",
-        "/images/cross-country-drive/image4.png"
+        "/images/cross-country-drive/image3.png"
       ],
+      
+      // Poster
+      posterImage: "/images/cross-country-drive/image4.png",
       
       // Trailer
       trailer: "https://player.vimeo.com/video/194277577",
@@ -566,9 +551,11 @@ const staticFilmsData = [
         "/images/somewhere-else/image2.png",
         "/images/somewhere-else/image3.png",
         "/images/somewhere-else/image4.png",
-        "/images/somewhere-else/image5.png",
-        "/images/somewhere-else/image6.png"
+        "/images/somewhere-else/image5.png"
       ],
+      
+      // Poster
+      posterImage: "/images/somewhere-else/image6.png",
       
       // Trailer
       trailer: "https://player.vimeo.com/video/133333994",

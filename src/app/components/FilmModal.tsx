@@ -81,6 +81,9 @@ interface FilmData {
   
   // Media
   trailer?: string
+  
+  // Poster
+  posterImage?: string
 }
 
 interface FilmModalProps {
@@ -709,6 +712,22 @@ const FilmModal = ({
                   </div>
                 );
               })}
+            </div>
+          )}
+
+          {/* Poster Section */}
+          {film.posterImage && (
+            <div className="film-modal-section poster-section">
+              <div className="poster-separator"></div>
+              <div className="poster-container">
+                <Image
+                  src={film.posterImage}
+                  alt={`${film.title} poster`}
+                  width={400}
+                  height={600}
+                  style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto' }}
+                />
+              </div>
             </div>
           )}
 
