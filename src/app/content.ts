@@ -154,7 +154,7 @@ const staticFilmsData = [
       // Festival selections
       festivals: [
         {
-          body: "45. MAGYAR FILMSZEMLE",
+          body: "45th Hungarian Film Week",
           location: "Hungary",
           year: "2026",
           highlighted: true,
