@@ -2067,6 +2067,24 @@ button:focus {
   text-align: center;
 }
 
+/* Festival text styling for highlighted items */
+.festival-text {
+  margin-top: 8px;
+}
+
+.festival-title {
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.festival-body {
+  margin: 0 0 4px 0;
+}
+
+.festival-location {
+  margin: 0;
+}
+
 .film-modal-trailer {
   margin-bottom: 40px;
   width: 100%;

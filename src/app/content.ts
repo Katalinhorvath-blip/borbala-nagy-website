@@ -149,7 +149,18 @@ const staticFilmsData = [
       awards: [],
       
       // Festival invitations and participation (hidden for now - to be updated)
-      invitations: []
+      invitations: [],
+      
+      // Festival selections
+      festivals: [
+        {
+          body: "45. MAGYAR FILMSZEMLE",
+          location: "Hungary",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/magyar_filmszemle_logo.png"
+        }
+      ]
     },
     {
       id: "land-of-glory",

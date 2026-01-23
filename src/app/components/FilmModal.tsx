@@ -31,6 +31,15 @@ interface Invitation {
   image?: string
 }
 
+interface Festival {
+  title?: string
+  body: string
+  location?: string
+  year?: string
+  highlighted?: boolean
+  image?: string
+}
+
 interface FilmData {
   id: string
   title: string
@@ -68,7 +77,7 @@ interface FilmData {
   specialMention?: string
   
   // Festival information
-  festivals?: string[]
+  festivals?: (string | Festival)[]
   invitations?: (string | Invitation)[]
   
   // Producer logos
@@ -521,7 +530,51 @@ const FilmModal = ({
           {film.festivals && film.festivals.length > 0 && (
             <div className="film-modal-section">
               <h3>Festivals</h3>
-              <p>{film.festivals.join(', ')}</p>
+              
+              {/* Highlighted festivals with logos */}
+              <div className="highlighted-items-container three-items">
+                {film.festivals.filter(f => typeof f === 'object' && f.highlighted && f.image).map((festival, index) => {
+                  const fest = festival as Festival
+                  return (
+                    <div key={index} className="highlighted-item">
+                      {fest.image && (
+                        <div className="highlight-image">
+                          <Image
+                            src={fest.image}
+                            alt={fest.body}
+                            width={150}
+                            height={100}
+                            style={{ objectFit: 'contain' }}
+                          />
+                        </div>
+                      )}
+                      <div className="festival-text">
+                        {fest.title && <p className="festival-title">{fest.title}</p>}
+                        <p className="festival-body">{fest.body}</p>
+                        {fest.location && fest.year && (
+                          <p className="festival-location">{fest.location}, {fest.year}</p>
+                        )}
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+              
+              {/* Simple text list of festivals */}
+              {(() => {
+                const simpleStrings = film.festivals.filter(f => typeof f === 'string') as string[]
+                const objectsWithoutHighlight = film.festivals
+                  .filter(f => typeof f === 'object' && (!f.highlighted || !f.image))
+                  .map(f => {
+                    const fest = f as Festival
+                    return `${fest.body}${fest.location && fest.year ? ` (${fest.location}, ${fest.year})` : ''}`
+                  })
+                const allSimple = [...simpleStrings, ...objectsWithoutHighlight]
+                
+                return allSimple.length > 0 ? (
+                  <p>{allSimple.join(', ')}</p>
+                ) : null
+              })()}
             </div>
           )}
 
