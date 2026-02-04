@@ -159,6 +159,13 @@ const staticFilmsData = [
           year: "2026",
           highlighted: true,
           image: "/images/invitations/magyar_filmszemle_logo.png"
+        },
+        {
+          body: "International Music & Cinema Festival Marseille",
+          location: "France",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/music_cinema_marseille.png"
         }
       ]
     },
@@ -726,9 +733,9 @@ export const films = staticFilmsData;
 
 export const vision = {
   title: "Vision",
-  statement: `“I believe that stories told through the female gaze create space for more honest and complex portrayals of human experience—fostering empathy and expanding our understanding of the world.” 
-In her work, Borbála Nagy examines the social structures that influence our lives, questioning power and inequality. She aims to provoke dialogue, reshape collective narratives, and contribute to a more equitable world. For her, cinema is more than storytelling–it’s a catalyst for reflection and change. 
-Both in her films and on set, she advocates for an open, conscious, and inclusive society. Questions of loneliness, identity, and self-ownership frequently emerge in her movies, alongside themes of gender, migration, the impact of oppression, and the possibilities of resistance. 
+  statement: `“I believe that stories told through the female gaze create space for more honest portrayals of human experience, fostering empathy and a deeper understanding of our world.” 
+In her work, Borbála Nagy examines the social structures that influence our lives, questioning power and inequality. She aims to provoke dialogue and to reshape collective narratives. For her, cinema is more than storytelling–it's a catalyst for reflection and change. 
+Questions of loneliness, identity, and self-ownership frequently emerge in her movies, alongside themes of gender, migration, the impact of oppression, and the possibilities of resistance.
 Fascinated by human nature, she explores how true character emerges when faced with a moral dilemma. These pivotal moments of self-confrontation, seen against the societal mirror, reveal the essence of the individual. 
 Despite the weight of her subjects, she finds humor in everyday absurdities, looking at life through a lens of irony.
 `,

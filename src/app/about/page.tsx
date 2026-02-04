@@ -71,7 +71,7 @@ export default function About() {
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
-                  Currently, she is completing her first feature{' '}
+                  She has recently completed her first feature{' '}
                   <button 
                     onClick={() => openModal('mambo-maternica')}
                     className="film-link-button"
