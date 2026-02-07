@@ -161,7 +161,7 @@ const staticFilmsData = [
           image: "/images/invitations/magyar_filmszemle_logo.png"
         },
         {
-          body: "International Music & Cinema Festival Marseille",
+          body: "International Festival Music & Cinema Marseille",
           location: "France",
           year: "2026",
           highlighted: true,

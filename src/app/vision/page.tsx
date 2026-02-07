@@ -16,11 +16,11 @@ export default function Vision() {
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
-                  In her work, Borbála Nagy examines the social structures that influence our lives, questioning power and inequality. She aims to provoke dialogue, reshape collective narratives, and contribute to a more equitable world. For her, cinema is more than storytelling&ndash;it&apos;s a catalyst for reflection and change.
+                  In her work, Borbála Nagy examines the social structures that influence our lives, questioning power and inequality. She aims to provoke dialogue and to reshape collective narratives. For her, cinema is more than storytelling&ndash;it&apos;s a catalyst for reflection and change.
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
-                  Both in her films and on set, she advocates for an open, conscious, and inclusive society. Questions of loneliness, identity, and self-ownership frequently emerge in her movies, alongside themes of gender, migration, the impact of oppression, and the possibilities of resistance.
+                  Questions of loneliness, identity, and self-ownership frequently emerge in her movies, alongside themes of gender, migration, the impact of oppression, and the possibilities of resistance.
                 </span>
                 <br/><br/>
                 <span className="bio-text-span">
