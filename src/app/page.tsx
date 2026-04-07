@@ -39,7 +39,7 @@ export default function Home() {
               Mambo Maternica
             </span>
             <span className="hero-text-span">
-              &quot; is in post-production.
+              &quot; is currently on the international festival circuit.
             </span>
           </div>
 

@@ -166,6 +166,13 @@ const staticFilmsData = [
           year: "2026",
           highlighted: true,
           image: "/images/invitations/music_cinema_marseille.png"
+        },
+        {
+          body: "Achtung Berlin Filmfestival",
+          location: "Germany",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/achtung_berlin.png"
         }
       ]
     },
