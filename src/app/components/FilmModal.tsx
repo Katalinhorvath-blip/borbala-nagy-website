@@ -786,7 +786,7 @@ const FilmModal = ({
 
           {/* Copyright */}
           <div className="film-modal-footer">
-            <p>© 2025 Borbála Nagy. All rights reserved.</p>
+            <p>© 2026 Borbála Nagy. All rights reserved.</p>
           </div>
         </div>
       </div>

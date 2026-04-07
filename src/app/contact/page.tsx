@@ -115,7 +115,7 @@ export default function Contact() {
       
       {/* Copyright Footer */}
       <div className="copyright-footer">
-        © 2025 Borbála Nagy. All rights reserved.
+        © 2026 Borbála Nagy. All rights reserved.
       </div>
     </div>
   )
