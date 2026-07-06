@@ -173,6 +173,42 @@ const staticFilmsData = [
           year: "2026",
           highlighted: true,
           image: "/images/invitations/achtung_berlin.png"
+        },
+        {
+          body: "Neisse Film Festival",
+          location: "Germany",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/nff2026_logo.png"
+        },
+        {
+          body: "Transilvania International Film Festival",
+          location: "Romania",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/TIFF.png"
+        },
+        {
+          body: "Lubuskie Film Summer",
+          location: "Poland",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/LLF.png",
+          imageScale: 0.7
+        },
+        {
+          body: "Ciné rencontres de Prades",
+          location: "France",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/CRP.png"
+        },
+        {
+          body: "European Film Festival Palić",
+          location: "Serbia",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/EFFP.png"
         }
       ]
     },

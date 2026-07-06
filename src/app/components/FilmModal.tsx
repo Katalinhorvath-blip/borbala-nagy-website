@@ -38,6 +38,7 @@ interface Festival {
   year?: string
   highlighted?: boolean
   image?: string
+  imageScale?: number
 }
 
 interface FilmData {
@@ -544,7 +545,7 @@ const FilmModal = ({
                             alt={fest.body}
                             width={150}
                             height={100}
-                            style={{ objectFit: 'contain' }}
+                            style={{ objectFit: 'contain', transform: fest.imageScale ? `scale(${fest.imageScale})` : undefined }}
                           />
                         </div>
                       )}
