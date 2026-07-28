@@ -315,13 +315,12 @@ const FilmModal = ({
                     .map((award, index) => (
                       <div key={`featured-${index}`} className="highlighted-item">
                         {award.image && (
-                          <div className="highlight-image">
-                            <Image
+                          <div className="highlight-image logo-box">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
                               src={award.image}
                               alt={`${award.award} - ${award.festival}`}
-                              width={200}
-                              height={133}
-                              style={{ objectFit: 'contain' }}
+                              className="logo-img"
                             />
                           </div>
                         )}
@@ -345,13 +344,12 @@ const FilmModal = ({
                     .map((award, index) => (
                       <div key={`highlighted-${index}`} className="highlighted-item">
                         {award.image && (
-                          <div className="highlight-image">
-                            <Image
+                          <div className="highlight-image logo-box">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
                               src={award.image}
                               alt={`${award.award} - ${award.festival}`}
-                              width={150}
-                              height={100}
-                              style={{ objectFit: 'contain' }}
+                              className="logo-img"
                             />
                           </div>
                         )}
@@ -407,13 +405,12 @@ const FilmModal = ({
                     .map((nomination, index) => (
                       <div key={`highlighted-${index}`} className="highlighted-item">
                         {nomination.image && (
-                          <div className="highlight-image">
-                            <Image
+                          <div className="highlight-image logo-box">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
                               src={nomination.image}
                               alt={`${nomination.nomination} - ${nomination.festival}`}
-                              width={(film.nominations?.filter(nomination => nomination.highlighted).length === 2) ? 200 : 150}
-                              height={(film.nominations?.filter(nomination => nomination.highlighted).length === 2) ? 133 : 100}
-                              style={{ objectFit: 'contain' }}
+                              className="logo-img"
                             />
                           </div>
                         )}
@@ -477,13 +474,12 @@ const FilmModal = ({
                       return (
                         <div key={`highlighted-${index}`} className="highlighted-item">
                           {inv.image && (
-                            <div className="highlight-image">
-                              <Image
+                            <div className="highlight-image logo-box">
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img
                                 src={inv.image}
                                 alt={`${inv.name} invitation`}
-                                width={highlightedCount === 2 ? 200 : highlightedCount === 4 ? 120 : 150}
-                                height={highlightedCount === 2 ? 133 : highlightedCount === 4 ? 80 : 100}
-                                style={{ objectFit: 'contain' }}
+                                className="logo-img"
                               />
                             </div>
                           )}
@@ -539,13 +535,13 @@ const FilmModal = ({
                   return (
                     <div key={index} className="highlighted-item">
                       {fest.image && (
-                        <div className="highlight-image">
-                          <Image
+                        <div className="highlight-image logo-box">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
                             src={fest.image}
                             alt={fest.body}
-                            width={150}
-                            height={100}
-                            style={{ objectFit: 'contain', transform: fest.imageScale ? `scale(${fest.imageScale})` : undefined }}
+                            className="logo-img"
+                            style={{ transform: fest.imageScale ? `scale(${fest.imageScale})` : undefined }}
                           />
                         </div>
                       )}

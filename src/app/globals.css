@@ -1966,6 +1966,25 @@ button:focus {
   height: auto;
 }
 
+/* Normalized logo box: uniform cap-height so all logos look the same
+   visual size and every caption starts on the same line */
+.highlight-image.logo-box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 72px;
+  margin-bottom: 14px;
+  overflow: visible;
+}
+
+.highlight-image.logo-box .logo-img {
+  max-height: 56px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 /* Mobile: make highlighted award/invitation logos responsive */
 @media (max-width: 768px) {
   .highlighted-items-container {
@@ -1979,12 +1998,22 @@ button:focus {
   .highlighted-items-container.four-items .highlighted-item {
     min-width: 0;
     max-width: none;
-    flex: 0 1 calc(50% - 8px);
+    flex: 0 1 100%;
   }
 
   /* Allow the four-items row to wrap instead of overflowing */
   .highlighted-items-container.four-items {
     flex-wrap: wrap;
+  }
+
+  /* Slightly smaller uniform logo height on mobile */
+  .highlight-image.logo-box {
+    height: 64px;
+    margin-bottom: 12px;
+  }
+
+  .highlight-image.logo-box .logo-img {
+    max-height: 48px;
   }
 }
 
