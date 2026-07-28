@@ -1960,6 +1960,34 @@ button:focus {
   font-weight: 600;
 }
 
+/* Ensure logo images scale down within their container */
+.highlight-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile: make highlighted award/invitation logos responsive */
+@media (max-width: 768px) {
+  .highlighted-items-container {
+    gap: 16px;
+  }
+
+  .highlighted-item,
+  .highlighted-items-container.two-items .highlighted-item,
+  .highlighted-items-container.featured-two-items .highlighted-item,
+  .highlighted-items-container.three-items .highlighted-item,
+  .highlighted-items-container.four-items .highlighted-item {
+    min-width: 0;
+    max-width: none;
+    flex: 0 1 calc(50% - 8px);
+  }
+
+  /* Allow the four-items row to wrap instead of overflowing */
+  .highlighted-items-container.four-items {
+    flex-wrap: wrap;
+  }
+}
+
 /* Financing logo grid layout for film modals */
 
 /* Financing logos at bottom */
