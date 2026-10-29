@@ -145,14 +145,74 @@ const staticFilmsData = [
       // Financing logos (hidden for now)
       financingLogos: [],
       
-      // Awards and recognition (hidden for now - to be updated)
-      awards: [],
+      // Awards and recognition
+      awards: [
+        {
+          festival: "KinEst Fest",
+          award: "3rd prize of the jury",
+          year: "",
+          location: "Italy",
+          highlighted: true,
+          image: "/images/awards/Kinefest_3rd_jury.png"
+        },
+        {
+          festival: "KinEst Fest",
+          award: "2nd prize of the audience",
+          year: "",
+          location: "Italy",
+          highlighted: true,
+          image: "/images/awards/Kinefest_2nd_audience.png"
+        }
+      ],
       
       // Festival invitations and participation (hidden for now - to be updated)
       invitations: [],
       
       // Festival selections
       festivals: [
+        {
+          body: "Filmpiknik",
+          location: "Hungary",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/filmpiknik.png",
+          imageScale: 0.75
+        },
+        {
+          body: "Eva Filmmakers Fest",
+          location: "Romania",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/eva.png"
+        },
+        {
+          body: "Filmtettfeszt",
+          location: "Romania",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/filmtettfeszt.png"
+        },
+        {
+          body: "KinEst Fest",
+          location: "Italy",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/kinefest.png"
+        },
+        {
+          body: "Filmkunsttage Sachsen-Anhalt",
+          location: "Germany",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/filmkunsttage.png"
+        },
+        {
+          body: "Alternative Film Festival",
+          location: "Romania",
+          year: "2026",
+          highlighted: true,
+          image: "/images/invitations/alternative.png"
+        },
         {
           body: "45th Hungarian Film Week",
           location: "Hungary",
@@ -186,7 +246,8 @@ const staticFilmsData = [
           location: "Romania",
           year: "2026",
           highlighted: true,
-          image: "/images/invitations/TIFF.png"
+          image: "/images/invitations/TIFF.png",
+          imageScale: 0.6
         },
         {
           body: "Lubuskie Film Summer",
